@@ -2,6 +2,7 @@
 @import './sections/navbar';
 @import './sections/header';
 @import './sections/about';
+@import './sections/trajectory';
 
 // Resets
 
@@ -46,15 +47,18 @@
 
 .line-decorator {
     display: flex;
-    position: absolute;
     width: 2px;
-    height: 100%;
+    position: absolute;
     top: 0%;
-    left: 50%;
-    // transform: translate(-50%, -50%);
+    left: calc(50% - 1px);
+    height: 100%;
     z-index: -1;
 }
 
 .d-inline {
     display: inline-block;
+}
+
+.space-section {
+    padding: 150px 0;
 }

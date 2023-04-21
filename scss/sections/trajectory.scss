@@ -1,0 +1,125 @@
+@import "../modules/tipography.scss";
+@import '../modules/colors';
+
+.section-trajectory {
+    display: flex;
+    flex-direction: column;
+    background-color: $whiteMainDark;
+    position: relative;
+    z-index: 1;
+
+    .line-decorator {
+        background-color: $whiteDark;
+    }
+
+    .row {
+        // display: flex;
+        // flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 0 1fr;
+        grid-template-areas: "card dot period";
+        gap: 0 40px;
+        align-items: center;
+
+        &:nth-child(odd) {
+            // flex-direction: row-reverse;
+            grid-template-areas: "period dot card";
+
+            .gradient-border {
+                justify-self: flex-start;
+                &::before {
+                    left: 0;
+                    border-radius: 5px 0 0 5px;
+                }
+            }
+
+            .period {
+                justify-self: flex-end;
+            }
+        }
+
+        .gradient-border {
+            grid-area: card;
+            justify-self: flex-end;
+            align-self: center;
+            position: relative;
+
+            &::before {
+                border-radius: 0 5px 5px 0;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 7px;
+                background-image: $primaryGradient;
+                z-index: 1;
+            }
+        }
+
+        .card {
+            background-color: $whiteLight;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 520px;
+
+            h2 {
+                font: $font-subtitle;
+                text-transform: uppercase;
+                color: $grayLight;
+            }
+
+            h1 {
+                font: $font-title;
+                background-image: $primaryGradient;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            p {
+                font: $font-paragraph;
+                color: $blackDark;
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                li {
+                    box-shadow: inset 0px 0px 2px rgba($color: $primary, $alpha: .5);
+                    font: $font-paragraph;
+                    text-transform: uppercase;
+                    color: $primary;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .dot-decorator {
+            grid-area: dot;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $primaryGradient;
+            justify-self: center;
+            // align-self: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .period {
+            grid-area: period;
+            font: $font-paragraph;
+            background-image: $primaryGradient;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+
+}

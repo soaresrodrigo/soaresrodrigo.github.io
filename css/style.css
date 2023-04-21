@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 .btn {
   font: normal normal 700 normal 14px/18px "Orbitron", sans-serif;
   text-transform: uppercase;
@@ -123,7 +125,6 @@ ul li a:not(.btn-normal):hover {
 .section-about .container {
   display: flex;
   flex-direction: row;
-  padding: 150px 0;
   height: calc(100vh - 300px);
   margin: auto;
 }
@@ -176,6 +177,109 @@ ul li a:not(.btn-normal):hover {
   opacity: 1;
 }
 
+.section-trajectory {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 1;
+}
+.section-trajectory .line-decorator {
+  background-color: #eaeaea;
+}
+.section-trajectory .row {
+  display: grid;
+  grid-template-columns: 1fr 0 1fr;
+  grid-template-areas: "card dot period";
+  gap: 0 40px;
+  align-items: center;
+}
+.section-trajectory .row:nth-child(odd) {
+  grid-template-areas: "period dot card";
+}
+.section-trajectory .row:nth-child(odd) .gradient-border {
+  justify-self: flex-start;
+}
+.section-trajectory .row:nth-child(odd) .gradient-border::before {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+.section-trajectory .row:nth-child(odd) .period {
+  justify-self: flex-end;
+}
+.section-trajectory .row .gradient-border {
+  grid-area: card;
+  justify-self: flex-end;
+  align-self: center;
+  position: relative;
+}
+.section-trajectory .row .gradient-border::before {
+  border-radius: 0 5px 5px 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 7px;
+  background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  z-index: 1;
+}
+.section-trajectory .row .card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 520px;
+}
+.section-trajectory .row .card h2 {
+  font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
+  text-transform: uppercase;
+  color: #8C8C8C;
+}
+.section-trajectory .row .card h1 {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.section-trajectory .row .card p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #000000;
+}
+.section-trajectory .row .card ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.section-trajectory .row .card ul li {
+  box-shadow: inset 0px 0px 2px rgba(108, 92, 231, 0.5);
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #6C5CE7;
+  padding: 5px;
+  border-radius: 5px;
+}
+.section-trajectory .row .dot-decorator {
+  grid-area: dot;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+}
+.section-trajectory .row .period {
+  grid-area: period;
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -209,16 +313,20 @@ ul li a:not(.btn-normal):hover {
 
 .line-decorator {
   display: flex;
-  position: absolute;
   width: 2px;
-  height: 100%;
+  position: absolute;
   top: 0%;
-  left: 50%;
+  left: calc(50% - 1px);
+  height: 100%;
   z-index: -1;
 }
 
 .d-inline {
   display: inline-block;
+}
+
+.space-section {
+  padding: 150px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
