@@ -1,0 +1,59 @@
+@import '../modules/tipography';
+@import '../modules/colors';
+
+.section-header {
+    position: relative;
+    height: calc(100vh - 220px);
+    padding-top: 120px;
+
+    .line-decorator {
+        background-color: #212121;
+    }
+
+    .text-config {
+        display: flex;
+        flex-direction: column;
+        gap: 60px 0;
+
+        h1 {
+            font: $font-big-title;
+            color: $silverLight;
+
+            span {
+                color: $primary;
+            }
+        }
+
+        p {
+            font: $font-paragraph;
+            color: $silverMain;
+            width: 495px;
+        }
+
+        .stacks {
+            font: $font-free;
+
+            li {
+                display: flex;
+                box-shadow: inset 0px -10px 0px $primary;
+                transition: all .3s;
+
+                &:hover {
+                    cursor: none;
+                    box-shadow: inset 0px -24px 0px $primary;
+
+                }
+            }
+        }
+    }
+
+    .principal-image {
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        z-index: -1;
+    }
+
+    
+
+}

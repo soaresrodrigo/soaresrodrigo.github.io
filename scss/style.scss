@@ -1,0 +1,60 @@
+@import './modules/colors';
+@import './sections/navbar';
+@import './sections/header';
+@import './sections/about';
+
+// Resets
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Backgrounds
+
+.bg-blackMain {
+    background-color: $blackMain;
+    color: $whiteMain;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(180deg, $primary 0%, $blackMain 100%, $blackDark 100%);
+    color: $whiteDark;
+}
+
+
+// Shadows
+.shadow {
+    &.primary {
+        box-shadow: 5px 5px 0px $primary;
+    }
+}
+
+// Generics
+
+.position-relative {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.line-decorator {
+    display: flex;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.d-inline {
+    display: inline-block;
+}
