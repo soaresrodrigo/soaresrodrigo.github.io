@@ -38,7 +38,7 @@
     }
 }
 
-// Generics
+// General
 
 .btn {
     font: $font-button-normal;
@@ -53,6 +53,7 @@
     // transform: scale(1);
     transition: .5s all;
     margin: 0;
+
     &:hover {
         color: $blackDark;
         box-shadow: 5px 5px 0px $blackDark;
@@ -62,6 +63,7 @@
     &.primary {
         color: $primary;
         background-color: $blackMain;
+
         &:hover {
             background-color: $primary;
             color: $blackDark;
@@ -71,12 +73,13 @@
     &.primaryMainDark {
         background-color: $blackDark;
         color: $primaryMainDark;
+
         &:hover {
             background-color: $primaryMainDark;
             color: $blackDark;
         }
     }
-    
+
 }
 
 .position-relative {
@@ -106,5 +109,22 @@
 }
 
 .space-section {
-    padding: 150px 0;
+    padding: 80px 0;
+}
+
+.tag-icon {
+    display: flex;
+    position: relative;
+    z-index: -1;
+    padding: 15px;
+    
+    &.start {
+        justify-content: flex-start;
+    }
+    
+    &.end {
+        justify-content: flex-end;
+
+    }
+
 }

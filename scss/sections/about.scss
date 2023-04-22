@@ -10,7 +10,7 @@
     .container {
         display: flex;
         flex-direction: row;
-        height: calc(100vh - 300px);
+        // height: calc(100vh - 300px);
         margin: auto;
 
 
@@ -46,24 +46,24 @@
         display: flex;
         gap: 5em;
         overflow-x: auto;
-        // z-index: -2;
         justify-content: center;
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 100px;
         left: 0;
         bottom: 0;
-        // background-color: rgba($color: #000000, $alpha: .05);
+        background-color: rgba($color: $whiteLight, $alpha: .02);
         
         li {
             list-style: none;
             display: inline-flex;
+            backdrop-filter: blur(3px);
 
             img {
                 width: 50px;
                 height: 50px;
                 filter: grayscale(1);
-                opacity: .3;
+                opacity: .7;
                 transition: .3s all;
                 
                 &:hover {
