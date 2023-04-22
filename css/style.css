@@ -11,6 +11,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 .section-menu > navbar {
   display: flex;
   position: relative;
@@ -392,6 +394,108 @@ ul li a:not(.btn-normal):hover {
 }
 .section-contract .text-config .cta > a {
   font: normal normal 700 normal 24px/30px "Orbitron", sans-serif;
+}
+
+.section-contact {
+  position: relative;
+  z-index: 1;
+}
+.section-contact .line-decorator {
+  background-color: #212121;
+  height: calc(100% - 58px);
+}
+.section-contact .container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.section-contact .main-info {
+  display: flex;
+  flex-direction: row;
+}
+.section-contact .title-config {
+  max-width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-contact .title-config h1 {
+  font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
+  color: #DBDBDB;
+}
+.section-contact .title-config h1 span {
+  color: #6C5CE7;
+}
+.section-contact .title-config p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #C9C9C9;
+}
+.section-contact .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 40px;
+  width: 350px;
+  gap: 20px;
+}
+.section-contact .card h2 {
+  font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.section-contact .card ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.section-contact .card ul li {
+  display: flex;
+  gap: 0 20px;
+  flex-direction: row;
+}
+.section-contact .card ul li img {
+  width: 24px;
+  height: 24px;
+}
+.section-contact .card ul li a {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  text-decoration-color: #6C5CE7;
+  display: flex;
+  gap: 0 20px;
+  transition: all 0.3s;
+  display: block;
+  border-bottom: 1px dashed #6C5CE7;
+  text-transform: lowercase;
+}
+.section-contact .card ul li a:hover {
+  color: #000000;
+  box-shadow: inset 0px -24px 0px #6C5CE7;
+}
+.section-contact .copywrite {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #212121;
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: auto;
+  gap: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.section-contact .smoke-decorator {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 * {

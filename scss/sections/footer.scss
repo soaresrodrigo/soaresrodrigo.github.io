@@ -1,0 +1,119 @@
+@import "../modules/tipography.scss";
+@import '../modules/colors';
+
+.section-contact {
+    position: relative;
+    z-index: 1;
+
+    .line-decorator {
+        background-color: #212121;
+        height: calc(100% - 58px);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .title-config {
+        max-width: 760px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+
+        h1 {
+            font: $font-big-title;
+            color: $silverLight;
+
+            span {
+                color: $primary;
+            }
+        }
+
+        p {
+            font: $font-paragraph;
+            color: $silverMain;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: $blackDark;
+        padding: 40px;
+        width: 350px;
+        gap: 20px;
+
+        h2 {
+            font: $font-subtitle;
+            text-transform: uppercase;
+            text-align: center;
+            color: $whiteLight;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            li {
+                display: flex;
+                gap: 0 20px;
+                flex-direction: row;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                a {
+                    font: $font-paragraph;
+                    text-decoration-color: $primary;
+                    display: flex;
+                    gap: 0 20px;
+                    transition: all .3s;
+                    display: block;
+                    border-bottom: 1px dashed $primary;
+                    text-transform: lowercase;
+
+                    &:hover {
+                        color: $blackDark;
+                        box-shadow: inset 0px -24px 0px $primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .copywrite {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #212121;
+        font: $font-paragraph;
+        font-size: 12px;
+        line-height: auto;
+        gap: 5px 0;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .smoke-decorator {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+}
