@@ -1,0 +1,131 @@
+@import "../modules/tipography.scss";
+@import '../modules/colors';
+
+.section-services {
+    position: relative;
+    z-index: 1;
+    background-color: $primaryLightDark;
+
+    .line-decorator {
+        background-color: $primaryLight;
+    }
+
+    .container {
+        display: flex;
+        gap: 0 40px;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        background-color: $blackMain;
+        width: 360px;
+        height: 360px;
+        border-radius: 5px;
+        color: $primaryLight;
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        h1 {
+            font: $font-subtitle;
+            margin: 20px 0 40px 0;
+            text-transform: uppercase;
+
+        }
+
+        .skills {
+            display: flex;
+            font: $font-free;
+
+            &.dba {
+                display: flex;
+                flex-wrap: wrap;
+                white-space: nowrap;
+                justify-content: center;
+                gap: 20px;
+
+                span {
+                    position: relative;
+                    flex-shrink: 0;
+                    margin: auto;
+                    border: 1px solid $primary;
+                    padding: 5px;
+
+                    &.arrow {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -7px;
+                            /* Define a posição vertical da seta em relação ao span */
+                            left: 50%;
+                            /* Define a posição horizontal da seta em relação ao span */
+                            transform: translateX(-50%);
+                            /* Centraliza a seta horizontalmente */
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-top: 5px solid #6C5CE7;
+                            /* Cor da seta */
+                            z-index: 2;
+                            /* Define a ordem de empilhamento da seta */
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -20px;
+                            /* Define a posição vertical da linha em relação ao span */
+                            left: 50%;
+                            /* Define a posição horizontal da linha em relação ao span */
+                            transform: translateX(-50%);
+                            /* Centraliza a linha horizontalmente */
+                            border-left: 1px solid #6C5CE7;
+                            /* Cor da linha vertical */
+                            height: 15px;
+                            /* Altura da linha vertical */
+                            z-index: 1;
+                            /* Define a ordem de empilhamento da linha */
+                        }
+                    }
+                }
+            }
+
+            &.developer>ul {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    &::before {
+                        content: '<';
+                        color: $primary;
+                    }
+
+                    &::after {
+                        content: '/>';
+                        color: $primary;
+                    }
+                }
+            }
+
+            &.designer > ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20;
+                
+                li {
+                    border: 1px dashed $primary;
+                    padding: 5px 10px;
+                    
+                    &:nth-child(4n+3) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

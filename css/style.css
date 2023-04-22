@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
@@ -278,6 +281,114 @@ ul li a:not(.btn-normal):hover {
   background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.section-services {
+  position: relative;
+  z-index: 1;
+  background-color: #E7E3FF;
+}
+.section-services .line-decorator {
+  background-color: #EDEBFF;
+}
+.section-services .container {
+  display: flex;
+  gap: 0 40px;
+}
+.section-services .card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #161616;
+  width: 360px;
+  height: 360px;
+  border-radius: 5px;
+  color: #EDEBFF;
+}
+.section-services .card img {
+  width: 64px;
+  height: 64px;
+}
+.section-services .card h1 {
+  font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
+  margin: 20px 0 40px 0;
+  text-transform: uppercase;
+}
+.section-services .card .skills {
+  display: flex;
+  font: normal normal 400 normal 20px/24px "Open Sans", sans-serif;
+}
+.section-services .card .skills.dba {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+.section-services .card .skills.dba span {
+  position: relative;
+  flex-shrink: 0;
+  margin: auto;
+  border: 1px solid #6C5CE7;
+  padding: 5px;
+}
+.section-services .card .skills.dba span.arrow::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  /* Define a posição vertical da seta em relação ao span */
+  left: 50%;
+  /* Define a posição horizontal da seta em relação ao span */
+  transform: translateX(-50%);
+  /* Centraliza a seta horizontalmente */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #6C5CE7;
+  /* Cor da seta */
+  z-index: 2;
+  /* Define a ordem de empilhamento da seta */
+}
+.section-services .card .skills.dba span.arrow::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  /* Define a posição vertical da linha em relação ao span */
+  left: 50%;
+  /* Define a posição horizontal da linha em relação ao span */
+  transform: translateX(-50%);
+  /* Centraliza a linha horizontalmente */
+  border-left: 1px solid #6C5CE7;
+  /* Cor da linha vertical */
+  height: 15px;
+  /* Altura da linha vertical */
+  z-index: 1;
+  /* Define a ordem de empilhamento da linha */
+}
+.section-services .card .skills.developer > ul {
+  display: flex;
+  flex-direction: column;
+}
+.section-services .card .skills.developer > ul li::before {
+  content: "<";
+  color: #6C5CE7;
+}
+.section-services .card .skills.developer > ul li::after {
+  content: "/>";
+  color: #6C5CE7;
+}
+.section-services .card .skills.designer > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20;
+}
+.section-services .card .skills.designer > ul li {
+  border: 1px dashed #6C5CE7;
+  padding: 5px 10px;
+}
+.section-services .card .skills.designer > ul li:nth-child(4n+3) {
+  margin-left: 20px;
 }
 
 * {
