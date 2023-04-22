@@ -1,0 +1,29 @@
+@import "../modules/tipography.scss";
+@import '../modules/colors';
+
+.section-contract {
+    display: flex;
+    position: relative;
+    background-color: $primary;
+    z-index: 1;
+
+    .line-decorator {
+        background-color: #7160F4;
+    }
+    
+    .text-config {
+        display: flex;
+        gap: 120px;
+        align-items: center;
+        h1 {
+            max-width: 660px;
+            font: $font-big-title;
+            color: $primaryMainDark;
+        }
+
+        .cta > a{
+            font: $font-button-big;
+        }
+    }
+
+}

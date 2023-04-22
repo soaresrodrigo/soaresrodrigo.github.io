@@ -4,6 +4,7 @@
 @import './sections/about';
 @import './sections/trajectory';
 @import './sections/service';
+@import './sections/contract';
 
 // Resets
 
@@ -30,9 +31,52 @@
     &.primary {
         box-shadow: 5px 5px 0px $primary;
     }
+
+    &.primaryMainDark {
+        box-shadow: 5px 5px 0px $primaryMainDark;
+    }
 }
 
 // Generics
+
+.btn {
+    font: $font-button-normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 3px;
+    // transform: scale(1);
+    transition: .5s all;
+    margin: 0;
+    &:hover {
+        color: $blackDark;
+        box-shadow: 5px 5px 0px $blackDark;
+        transform: perspective(3);
+    }
+
+    &.primary {
+        color: $primary;
+        background-color: $blackMain;
+        &:hover {
+            background-color: $primary;
+            color: $blackDark;
+        }
+    }
+
+    &.primaryMainDark {
+        background-color: $blackDark;
+        color: $primaryMainDark;
+        &:hover {
+            background-color: $primaryMainDark;
+            color: $blackDark;
+        }
+    }
+    
+}
 
 .position-relative {
     position: relative;

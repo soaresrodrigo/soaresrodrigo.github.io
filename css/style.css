@@ -9,28 +9,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-.btn {
-  font: normal normal 700 normal 14px/18px "Orbitron", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 30px;
-  border-radius: 3px;
-  transform: scale(1);
-  transition: 0.3s all;
-  margin: 0;
-}
-.btn.primary {
-  color: #6C5CE7 !important;
-  background-color: #161616;
-}
-.btn:hover {
-  transform: scale(1.05);
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 .section-menu > navbar {
   display: flex;
   position: relative;
@@ -391,6 +371,29 @@ ul li a:not(.btn-normal):hover {
   margin-left: 20px;
 }
 
+.section-contract {
+  display: flex;
+  position: relative;
+  background-color: #6C5CE7;
+  z-index: 1;
+}
+.section-contract .line-decorator {
+  background-color: #7160F4;
+}
+.section-contract .text-config {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+}
+.section-contract .text-config h1 {
+  max-width: 660px;
+  font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
+  color: #B7ADFF;
+}
+.section-contract .text-config .cta > a {
+  font: normal normal 700 normal 24px/30px "Orbitron", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -408,6 +411,44 @@ ul li a:not(.btn-normal):hover {
 
 .shadow.primary {
   box-shadow: 5px 5px 0px #6C5CE7;
+}
+.shadow.primaryMainDark {
+  box-shadow: 5px 5px 0px #B7ADFF;
+}
+
+.btn {
+  font: normal normal 700 normal 14px/18px "Orbitron", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 3px;
+  transition: 0.5s all;
+  margin: 0;
+}
+.btn:hover {
+  color: #000000;
+  box-shadow: 5px 5px 0px #000000;
+  transform: perspective(3);
+}
+.btn.primary {
+  color: #6C5CE7;
+  background-color: #161616;
+}
+.btn.primary:hover {
+  background-color: #6C5CE7;
+  color: #000000;
+}
+.btn.primaryMainDark {
+  background-color: #000000;
+  color: #B7ADFF;
+}
+.btn.primaryMainDark:hover {
+  background-color: #B7ADFF;
+  color: #000000;
 }
 
 .position-relative {

@@ -1,29 +1,7 @@
 @import '../modules/tipography';
 @import '../modules/colors';
 
-.btn {
-    font: $font-button-normal;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 30px;
-    border-radius: 3px;
-    transform: scale(1);
-    transition: .3s all;
-    margin: 0;
 
-    &.primary {
-        color: $primary !important;
-        background-color: $blackMain;
-    }
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
 
 .section-menu>navbar {
     display: flex;
