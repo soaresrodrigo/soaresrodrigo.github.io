@@ -94,16 +94,26 @@
     .copywrite {
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
         background-color: #212121;
         font: $font-paragraph;
         font-size: 12px;
         line-height: auto;
-        gap: 5px 0;
+        gap: 0;
         border-radius: 5px;
         text-align: center;
         max-width: 500px;
         margin: 0 auto;
+
+        a {
+            color: $silverMain;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                color: lighten($silverMain, 10%);
+            }
+        }
     }
 
     .smoke-decorator {

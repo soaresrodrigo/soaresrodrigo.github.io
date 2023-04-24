@@ -18,10 +18,14 @@
             <img class="rocket-decorator" src="./icons/rocket.svg" alt="" />
 
             <ul>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Trajetória</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#" class="btn primary shadow">Contratar</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#trajectory">Trajetória</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
+                        target="_blank" class="btn primary shadow">
+                        Vamos conversar</a>
+                </li>
             </ul>
         </navbar>
     </div>
@@ -66,7 +70,7 @@
 
 
     <!-- About -->
-    <section class="section-about bg-gradient-primary">
+    <section class="section-about bg-gradient-primary" id="about">
         <div class="tag-icon start">
             <img src="./icons/about_initial_big_tag.svg" alt="">
         </div>
@@ -85,7 +89,10 @@
                     facilitando assim, o crescimento pessoal e <strong>empresarial</strong>!</p>
 
                 <div class="button-cta">
-                    <a href="#" class="btn primary shadow">VAmos conversar</a>
+                    <a href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
+                        target="_blank" class="btn primary shadow">
+                        Vamos conversar
+                    </a>
                 </div>
             </div>
         </div>
@@ -110,7 +117,7 @@
     </section>
 
     <!-- Trajectory -->
-    <div class="section-trajectory">
+    <section class="section-trajectory" id="trajectory">
         <div class="tag-icon start">
             <img src="./icons/trajectory_initial_big_tag.svg" alt="">
         </div>
@@ -300,141 +307,149 @@
             <img src="./icons/trajectory_final_big_tag.svg" alt="">
         </div>
 
-        </section>
+    </section>
 
-        <!-- Services -->
-        <section class="section-services">
-            <div class="tag-icon start">
-                <img src="./icons/service_initial_big_tag.svg" alt="">
+    <!-- Services -->
+    <section class="section-services" id="services">
+        <div class="tag-icon start">
+            <img src="./icons/service_initial_big_tag.svg" alt="">
+        </div>
+        <div class="line-decorator"></div>
+        <div class="container space-section">
+            <!-- dba -->
+            <div class="card shadow primary">
+                <img src="./icons/database.svg" alt="database" />
+                <h1>DBA</h1>
+                <div class="skills dba">
+                    <span>criação de banco de dados</span>
+                    <span class="arrow">manutenção</span>
+                    <span class="arrow">normalização</span>
+                </div>
             </div>
-            <div class="line-decorator"></div>
-            <div class="container space-section">
-                <!-- dba -->
+            <!-- web developer -->
+            <div class="card shadow primary">
+                <img src="./icons/code.svg" alt="code" />
+                <h1>web developer</h1>
+                <div class="skills developer">
+                    <ul>
+                        <li>manutenção</li>
+                        <li>code_review</li>
+                        <li>ecommerce</li>
+                        <li>seo</li>
+                    </ul>
+                    <ul>
+                        <li>hospedagem</li>
+                        <li>tech_spec</li>
+                        <li>features</li>
+                        <li>api</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- designer ux/ui -->
+            <div class="card shadow primary">
+                <img src="./icons/design.svg" alt="design" />
+                <h1>designer ux/ui</h1>
+                <div class="skills designer">
+                    <ul>
+                        <li>web designer</li>
+                        <li>app designer</li>
+                        <li>redesign</li>
+                        <li>wireframes</li>
+                        <li>design responsivo</li>
+                        <li>drafts</li>
+                        <li>lo-fi</li>
+                        <li>hi-fi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tag-icon end">
+            <img src="./icons/service_final_big_tag.svg" alt="">
+        </div>
+    </section>
+
+
+    <!-- Hire me -->
+    <section class="section-contract">
+        <div class="tag-icon start">
+            <img src="./icons/contract_initial_big_tag.svg" alt="">
+        </div>
+        <div class="line-decorator"></div>
+        <div class="container space-section">
+            <div class="text-config">
+                <h1>Quer saber se eu sou a pessoa certa para seu time ou projeto?</h1>
+                <div class="cta">
+                    <a href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
+                        target="_blank" class="btn primaryMainDark shadow">
+                        Vamos conversar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="tag-icon end">
+            <img src="./icons/contract_final_big_tag.svg" alt="">
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <footer class="section-contact bg-blackMain">
+        <div class="tag-icon start">
+            <img src="./icons/contact_initial_big_tag.svg" alt="">
+        </div>
+        <div class="line-decorator"></div>
+        <div class="container space-section">
+            <div class="main-info">
+                <div class="title-config">
+                    <h1>Me chamo <br />
+                        <span>Rodrigo Soares</span> e...
+                    </h1>
+                    <p>sou graduado em Análise e Desenvolvimento de Sistemas. Sou aquele profissional ideal em
+                        programação ou design web que falta para implementar seu time.</p>
+                </div>
                 <div class="card shadow primary">
-                    <img src="./icons/database.svg" alt="database" />
-                    <h1>DBA</h1>
-                    <div class="skills dba">
-                        <span>criação de banco de dados</span>
-                        <span class="arrow">manutenção</span>
-                        <span class="arrow">normalização</span>
-                    </div>
-                </div>
-                <!-- web developer -->
-                <div class="card shadow primary">
-                    <img src="./icons/code.svg" alt="code" />
-                    <h1>web developer</h1>
-                    <div class="skills developer">
-                        <ul>
-                            <li>manutenção</li>
-                            <li>code_review</li>
-                            <li>ecommerce</li>
-                            <li>seo</li>
-                        </ul>
-                        <ul>
-                            <li>hospedagem</li>
-                            <li>tech_spec</li>
-                            <li>features</li>
-                            <li>api</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- designer ux/ui -->
-                <div class="card shadow primary">
-                    <img src="./icons/design.svg" alt="design" />
-                    <h1>designer ux/ui</h1>
-                    <div class="skills designer">
-                        <ul>
-                            <li>web designer</li>
-                            <li>app designer</li>
-                            <li>redesign</li>
-                            <li>wireframes</li>
-                            <li>design responsivo</li>
-                            <li>drafts</li>
-                            <li>lo-fi</li>
-                            <li>hi-fi</li>
-                        </ul>
-                    </div>
+                    <h2>Meus contatos e projetos</h2>
+                    <ul>
+                        <li>
+                            <img src="./icons/whatsapp.svg" alt="">
+                            <a href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
+                                target="_blank">
+                                (71) 9 8778-4959
+                            </a>
+                        </li>
+                        <li>
+                            <img src="./icons/gmail.svg" alt="">
+                            <a href="mailto:rodrigosoares.dev@gmail.com" target="_blank">rodrigosoares.dev@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="./icons/github.svg" alt="">
+                            <a href="https://github.com/soaresrodrigo" target="_blank">github.com/soaresrodrigo</a>
+                        </li>
+                        <li>
+                            <img src="./icons/linkedin.svg" alt="">
+                            <a href="https://linkedin.com/in/soaresrodrigo"
+                                target="_blank">linkedin.com/in/soaresrodrigo</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="tag-icon end">
-                <img src="./icons/service_final_big_tag.svg" alt="">
+            <div class="copywrite">
+                <p>2023 © Copywrite</p>
+                <p>Alguns direitos reservados a Rodrigo Soares </p>
+                <p>Direito dos ícones whatsapp, gmail, github e linkedin são reservados a <a
+                        href="https://www.flaticon.com/br/packs/social-media-370" target="_blank">Laisa Islam
+                        Ani</a></p>
             </div>
-        </section>
+        </div>
 
+        <img class="smoke-decorator" src="./icons/smoke.svg" alt="" />
+        <div class="tag-icon end">
+            <img src="./icons/contact_final_big_tag.svg" alt="">
+        </div>
+    </footer>
 
-        <!-- Hire me -->
-        <section class="section-contract">
-            <div class="tag-icon start">
-                <img src="./icons/contract_initial_big_tag.svg" alt="">
-            </div>
-            <div class="line-decorator"></div>
-            <div class="container space-section">
-                <div class="text-config">
-                    <h1>Quer saber se eu sou a pessoa certa para seu time ou projeto?</h1>
-                    <div class="cta">
-                        <a href="#" class="btn primaryMainDark shadow">vamos conversar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tag-icon end">
-                <img src="./icons/contract_final_big_tag.svg" alt="">
-            </div>
-        </section>
-
-
-        <!-- Contact -->
-        <footer class="section-contact bg-blackMain">
-            <div class="tag-icon start">
-                <img src="./icons/contact_initial_big_tag.svg" alt="">
-            </div>
-            <div class="line-decorator"></div>
-            <div class="container space-section">
-                <div class="main-info">
-                    <div class="title-config">
-                        <h1>Me chamo <br />
-                            <span>Rodrigo Soares</span> e...
-                        </h1>
-                        <p>sou graduado em Análise e Desenvolvimento de Sistemas. Sou aquele profissional ideal em
-                            programação ou design web que falta para implementar seu time.</p>
-                    </div>
-                    <div class="card shadow primary">
-                        <h2>Meus contatos e projetos</h2>
-                        <ul>
-                            <li>
-                                <img src="./icons/whatsapp.svg" alt="">
-                                <a href="#">(71) 9 8778-4959</a>
-                            </li>
-                            <li>
-                                <img src="./icons/gmail.svg" alt="">
-                                <a href="#">rodrigosoares.dev@gmail.com</a>
-                            </li>
-                            <li>
-                                <img src="./icons/github.svg" alt="">
-                                <a href="#">github.com/soaresrodrigo</a>
-                            </li>
-                            <li>
-                                <img src="./icons/linkedin.svg" alt="">
-                                <a href="#">linkedin.com/in/soaresrodrigo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="copywrite">
-                    <p>2023 © Copywrite</p>
-                    <p>Alguns direitos reservados a Rodrigo Soares </p>
-                    <p>Direito dos ícones de whatsapp, gmail, github e linkedin são reservados a <a href="#">Laisa Islam
-                            Ani</a></p>
-                </div>
-            </div>
-
-            <img class="smoke-decorator" src="./icons/smoke.svg" alt="" />
-            <div class="tag-icon end">
-                <img src="./icons/contact_final_big_tag.svg" alt="">
-            </div>
-        </footer>
-
-        <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
