@@ -1,0 +1,213 @@
+@import "../modules/tipography.scss";
+@import '../modules/colors';
+
+.section-trajectory {
+    display: flex;
+    flex-direction: column;
+    background-color: $whiteMainDark;
+    position: relative;
+    z-index: 1;
+
+    .space-section {
+        max-width: calc(100% - 40px);
+        padding: 80px 20px;
+    }
+
+    .line-decorator {
+        background-color: $whiteDark;
+    }
+
+    .row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 0 1fr;
+        grid-template-areas: "card dot period";
+        gap: 0 40px;
+        align-items: center;
+
+        &:nth-child(even) {
+            // flex-direction: row-reverse;
+            grid-template-areas: "period dot card";
+
+            .gradient-border {
+                justify-self: flex-start;
+
+                &::before {
+                    left: 0;
+                    border-radius: 5px 0 0 5px;
+                }
+            }
+
+            .period {
+                justify-self: flex-end;
+            }
+        }
+
+        .gradient-border {
+            grid-area: card;
+            justify-self: flex-end;
+            align-self: center;
+            position: relative;
+
+            &::before {
+                border-radius: 0 5px 5px 0;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 7px;
+                background-image: $primaryGradient;
+                z-index: 1;
+            }
+        }
+
+        .card {
+            background-color: $whiteLight;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 520px;
+
+            span {
+                display: none;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font: $font-free-mobile;
+                color: $silverDark;
+            }
+
+            h2 {
+                font: $font-subtitle;
+                text-transform: uppercase;
+                color: $grayLight;
+            }
+
+            h1 {
+                font: $font-title;
+                background-image: $primaryGradient;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            p {
+                font: $font-paragraph;
+                color: $blackDark;
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                li {
+                    box-shadow: inset 0px 0px 2px rgba($color: $primary, $alpha: .5);
+                    font: $font-paragraph;
+                    text-transform: uppercase;
+                    color: $primary;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .dot-decorator {
+            grid-area: dot;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $primaryGradient;
+            justify-self: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .period {
+            grid-area: period;
+            font: $font-paragraph;
+            background-image: $primaryGradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .space-section {
+            display: flex;
+            width: 100%;
+            padding: 40px 20px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: auto;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+
+            .gradient-border {
+                max-width: 100%;
+                margin: auto;
+
+                &::before {
+                    height: 0;
+                    width: 100%;
+                }
+            }
+
+            .card {
+                box-shadow: -2px 2px 3px rgba($color: $blackDark, $alpha: .1);
+
+                span {
+                    display: block;
+                }
+
+            }
+
+            .dot-decorator {
+                margin-top: -5px;
+                position: absolute;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 13px;
+                    background: $primaryGradient;
+                    /* substitua pela cor desejada */
+                    top: 5px;
+                    left: -5px;
+                    transform: rotate(60deg);
+                }
+            }
+
+            .period {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        .space-section {
+            padding: 80px 5px;
+            max-width: calc(100% - 10px);
+        }
+
+        .gradient-border {
+            max-width: 100%;
+
+        }
+    }
+
+}

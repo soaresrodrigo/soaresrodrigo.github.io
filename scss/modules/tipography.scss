@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// FONT FAMILY
+$font-family-primary: 'Orbitron', sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
+
+// VARIABLES
+$font-big-title: normal normal 700 normal 48px/60px $font-family-primary;
+$font-title: normal normal 700 normal 24px/32px $font-family-primary;
+$font-subtitle: normal normal 600 normal 14px/16px $font-family-primary;
+$font-button-normal: normal normal 700 normal 14px/18px $font-family-primary;
+$font-button-big: normal normal 700 normal 24px/30px $font-family-primary;
+$font-paragraph: normal normal 400 normal 16px/22px $font-family-secondary;
+$font-free: normal normal 400 normal 20px/24px $font-family-secondary;
+$font-free-mobile: normal normal 400 normal 10px/12px $font-family-secondary;

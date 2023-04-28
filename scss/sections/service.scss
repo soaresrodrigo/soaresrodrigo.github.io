@@ -1,0 +1,171 @@
+@import "../modules/tipography.scss";
+@import '../modules/colors';
+
+.section-services {
+    position: relative;
+    z-index: 1;
+    background-color: $primaryLightDark;
+
+    .line-decorator {
+        background-color: $primaryLight;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: calc(100% - 40px);
+        gap: 20px;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        background-color: $blackMain;
+        min-width: 320px;
+        max-width: 320px;
+        height: 360px;
+        border-radius: 5px;
+        color: $primaryLight;
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        h1 {
+            font: $font-subtitle;
+            margin: 20px 0 40px 0;
+            text-transform: uppercase;
+
+        }
+
+        .skills {
+            display: flex;
+            font: $font-free;
+
+            &.dba {
+                display: flex;
+                flex-wrap: wrap;
+                white-space: nowrap;
+                justify-content: center;
+                gap: 20px;
+
+                span {
+                    position: relative;
+                    flex-shrink: 0;
+                    margin: auto;
+                    border: 1px solid $primary;
+                    padding: 5px;
+
+                    &.arrow {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -7px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-top: 5px solid #6C5CE7;
+                            z-index: 2;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-left: 1px solid #6C5CE7;
+                            height: 15px;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+
+            &.developer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                li {
+                    &::before {
+                        content: '<';
+                        color: $primary;
+                    }
+
+                    &::after {
+                        content: '/>';
+                        color: $primary;
+                    }
+                }
+            }
+
+            &.designer>ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                li {
+                    border: 1px dashed $primary;
+                    padding: 5px 10px;
+
+                    &:nth-child(4n+3) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 400px) {
+        .container {
+            width: 100%;
+        }
+
+        .card {
+            // display: none;
+            width: 100%;
+            min-width: auto;
+            max-width: 220px;
+            height: 100%;
+
+            .skills {
+                &.dba {
+                    display: flex;
+                    flex-wrap: wrap;
+                    white-space: nowrap;
+                    justify-content: center;
+                    word-break: break-word;
+
+                    span {
+                        max-width: calc(100%);
+                        flex-shrink: 0;
+                        margin: auto;
+                    }
+                }
+
+                &.developer {
+                    flex-direction: column;
+                }
+
+                &.designer>ul {
+    
+                    li {
+    
+                        &:nth-child(4n+3) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

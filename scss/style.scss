@@ -1,0 +1,164 @@
+@import './modules/colors';
+@import './sections/navbar';
+@import './sections/header';
+@import './sections/about';
+@import './sections/trajectory';
+@import './sections/service';
+@import './sections/contract';
+@import './sections/footer';
+
+// Resets
+
+* {
+    margin: 0;
+    padding: 0;
+
+    ul {
+        list-style: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $blackMain;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+
+    &:hover {
+        background: lighten($primary, 10%);
+    }
+}
+
+
+// Backgrounds
+
+.bg-blackMain {
+    background-color: $blackMain;
+    color: $whiteMain;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(180deg, $primary 0%, $blackMain 100%, $blackDark 100%);
+    color: $whiteDark;
+}
+
+
+// Shadows
+.shadow {
+    &.primary {
+        box-shadow: 5px 5px 0px $primary;
+    }
+
+    &.primaryMainDark {
+        box-shadow: 5px 5px 0px $primaryMainDark;
+    }
+}
+
+// General
+
+.btn {
+    font: $font-button-normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+    margin: 0;
+
+    &:hover {
+        color: $blackDark !important;
+        box-shadow: 5px 5px 0px $blackDark;
+    }
+
+    &.primary {
+        color: $primary;
+        background-color: $blackMain;
+
+        &:hover {
+            background-color: $primary ;
+            color: $blackDark;
+        }
+    }
+
+    &.primaryMainDark {
+        background-color: $blackDark;
+        color: $primaryMainDark;
+
+        &:hover {
+            background-color: $primaryMainDark;
+            color: $blackDark;
+        }
+    }
+
+}
+
+.position-relative {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.line-decorator {
+    display: flex;
+    width: 2px;
+    position: absolute;
+    top: 0%;
+    left: calc(50% - 1px);
+    height: 100%;
+    z-index: -2;
+}
+
+.d-inline {
+    display: inline-block;
+}
+
+.space-section {
+    padding: 80px 0;
+}
+
+.tag-icon {
+    display: flex;
+    position: relative;
+    z-index: -1;
+    padding: 15px;
+
+    &.start {
+        justify-content: flex-start;
+    }
+
+    &.end {
+        justify-content: flex-end;
+
+    }
+
+    img {
+        width: auto;
+        height: 80px;
+
+        @media (max-width: 1240px) {
+            height: 40px;
+        }
+        @media (max-width: 400px) {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+
+
+}
