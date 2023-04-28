@@ -38,6 +38,34 @@
     }
 }
 
+// ANIMATIONS
+.js {
+    .js-scroll {
+        transition: all .3s;
+        opacity: 0;
+        transform: translate3d(-20px, 0, 0);
+
+        &.left {
+            transform: translate3d(20px, 0, 0);
+            
+        }
+        
+        &.start {
+            transform: translate3d(0, -20px,0);
+        }
+
+        &.end {
+            transform: translate3d(0, 20px,0);
+        }
+
+        &.active-animation {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+
+        }
+    }
+}
+
 
 // Backgrounds
 
@@ -85,7 +113,7 @@
 
     &.big {
         font: $font-button-big;
-        
+
         @media (max-width: 1240px) {
             font: $font-button-normal;
         }
@@ -165,6 +193,7 @@
         @media (max-width: 1240px) {
             height: 40px;
         }
+
         @media (max-width: 400px) {
             max-width: 100%;
             height: auto;
