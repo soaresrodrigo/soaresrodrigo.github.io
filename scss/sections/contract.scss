@@ -6,22 +6,43 @@
     background-color: $primary;
     z-index: 1;
 
+    .container {
+        width: calc(100% - 40px);
+        padding: 30px 20px;
+    }
+
     .line-decorator {
         background-color: #7160F4;
     }
-    
+
     .text-config {
         display: flex;
+        flex-wrap: wrap;
         gap: 120px;
         align-items: center;
+        justify-content: center;
+
         h1 {
-            max-width: 660px;
+            max-width: 640px;
             font: $font-big-title;
             color: $primaryMainDark;
         }
+    }
 
-        .cta > a{
-            font: $font-button-big;
+    @media (max-width: 1000px) {
+        .text-config>h1 {
+            max-width: 100%;
+        }
+
+    }
+
+    @media (max-width: 1240px) {
+        .text-config {
+            gap: 40px;
+
+            h1 {
+                font: $font-title;
+            }
         }
     }
 
