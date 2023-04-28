@@ -639,21 +639,37 @@
   background-color: #6C5CE7;
   z-index: 1;
 }
+.section-contract .container {
+  width: calc(100% - 40px);
+  padding: 30px 20px;
+}
 .section-contract .line-decorator {
   background-color: #7160F4;
 }
 .section-contract .text-config {
   display: flex;
+  flex-wrap: wrap;
   gap: 120px;
   align-items: center;
+  justify-content: center;
 }
 .section-contract .text-config h1 {
-  max-width: 660px;
+  max-width: 640px;
   font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
   color: #B7ADFF;
 }
-.section-contract .text-config .cta > a {
-  font: normal normal 700 normal 24px/30px "Orbitron", sans-serif;
+@media (max-width: 1000px) {
+  .section-contract .text-config > h1 {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1240px) {
+  .section-contract .text-config {
+    gap: 40px;
+  }
+  .section-contract .text-config h1 {
+    font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  }
 }
 
 .section-contact {
@@ -668,6 +684,8 @@
   display: flex;
   flex-direction: column;
   gap: 60px 0;
+  width: calc(100% - 40px);
+  padding: 30px 20px;
 }
 .section-contact .main-info {
   display: flex;
@@ -698,6 +716,7 @@
   padding: 40px;
   width: 350px;
   gap: 20px;
+  border-radius: 5px;
 }
 .section-contact .card h2 {
   font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
@@ -709,6 +728,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 }
 .section-contact .card ul li {
   display: flex;
@@ -722,6 +742,7 @@
 .section-contact .card ul li a {
   font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
   text-decoration-color: #6C5CE7;
+  color: #eaeaea;
   display: flex;
   gap: 0 20px;
   transition: all 0.3s;
@@ -765,6 +786,31 @@
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+@media (max-width: 1000px) {
+  .section-contact .main-info {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .section-contact .main-info .title-config {
+    max-width: 100%;
+  }
+  .section-contact .main-info .title-config h1 {
+    font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  }
+  .section-contact .tag-icon.end {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .section-contact .card {
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 100%;
+    padding: 10px;
+    word-break: break-all;
+  }
+}
 
 * {
   margin: 0;
@@ -772,6 +818,9 @@
 }
 * ul {
   list-style: none;
+}
+* a {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -810,7 +859,7 @@
   font: normal normal 700 normal 14px/18px "Orbitron", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -822,6 +871,14 @@
 .btn:hover {
   color: #000000 !important;
   box-shadow: 5px 5px 0px #000000;
+}
+.btn.big {
+  font: normal normal 700 normal 24px/30px "Orbitron", sans-serif;
+}
+@media (max-width: 1240px) {
+  .btn.big {
+    font: normal normal 700 normal 14px/18px "Orbitron", sans-serif;
+  }
 }
 .btn.primary {
   color: #6C5CE7;

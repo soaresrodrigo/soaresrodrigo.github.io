@@ -16,6 +16,10 @@
     ul {
         list-style: none;
     }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -65,7 +69,7 @@
     font: $font-button-normal;
     text-transform: uppercase;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -77,6 +81,14 @@
     &:hover {
         color: $blackDark !important;
         box-shadow: 5px 5px 0px $blackDark;
+    }
+
+    &.big {
+        font: $font-button-big;
+        
+        @media (max-width: 1240px) {
+            font: $font-button-normal;
+        }
     }
 
     &.primary {
