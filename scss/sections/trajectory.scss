@@ -191,10 +191,22 @@
                 }
             }
 
-
             .period {
                 display: none;
             }
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        .space-section {
+            padding: 80px 5px;
+            max-width: calc(100% - 10px);
+        }
+
+        .gradient-border {
+            max-width: 100%;
+
         }
     }
 

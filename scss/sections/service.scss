@@ -12,7 +12,10 @@
 
     .container {
         display: flex;
-        gap: 0 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: calc(100% - 40px);
+        gap: 20px;
     }
 
     .card {
@@ -21,7 +24,8 @@
         flex-direction: column;
         padding: 20px;
         background-color: $blackMain;
-        width: 360px;
+        min-width: 320px;
+        max-width: 320px;
         height: 360px;
         border-radius: 5px;
         color: $primaryLight;
@@ -61,42 +65,33 @@
                             content: "";
                             position: absolute;
                             top: -7px;
-                            /* Define a posição vertical da seta em relação ao span */
                             left: 50%;
-                            /* Define a posição horizontal da seta em relação ao span */
                             transform: translateX(-50%);
-                            /* Centraliza a seta horizontalmente */
                             border-left: 5px solid transparent;
                             border-right: 5px solid transparent;
                             border-top: 5px solid #6C5CE7;
-                            /* Cor da seta */
                             z-index: 2;
-                            /* Define a ordem de empilhamento da seta */
                         }
 
                         &::after {
                             content: "";
                             position: absolute;
                             top: -20px;
-                            /* Define a posição vertical da linha em relação ao span */
                             left: 50%;
-                            /* Define a posição horizontal da linha em relação ao span */
                             transform: translateX(-50%);
-                            /* Centraliza a linha horizontalmente */
                             border-left: 1px solid #6C5CE7;
-                            /* Cor da linha vertical */
                             height: 15px;
-                            /* Altura da linha vertical */
                             z-index: 1;
-                            /* Define a ordem de empilhamento da linha */
                         }
                     }
                 }
             }
 
-            &.developer>ul {
+            &.developer ul {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                gap: 5px;
 
                 li {
                     &::before {
@@ -111,18 +106,63 @@
                 }
             }
 
-            &.designer > ul {
+            &.designer>ul {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 20;
-                
+                gap: 20px;
+
                 li {
                     border: 1px dashed $primary;
                     padding: 5px 10px;
-                    
+
                     &:nth-child(4n+3) {
                         margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 400px) {
+        .container {
+            width: 100%;
+        }
+
+        .card {
+            // display: none;
+            width: 100%;
+            min-width: auto;
+            max-width: 220px;
+            height: 100%;
+
+            .skills {
+                &.dba {
+                    display: flex;
+                    flex-wrap: wrap;
+                    white-space: nowrap;
+                    justify-content: center;
+                    word-break: break-word;
+
+                    span {
+                        max-width: calc(100%);
+                        flex-shrink: 0;
+                        margin: auto;
+                    }
+                }
+
+                &.developer {
+                    flex-direction: column;
+                }
+
+                &.designer>ul {
+    
+                    li {
+    
+                        &:nth-child(4n+3) {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
