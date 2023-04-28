@@ -1,3 +1,24 @@
+//  Animação do scroll
+const sections = document.querySelectorAll(".js-scroll");
+
+if (sections.length) {
+    const halfWindow = window.innerHeight * 0.95;
+
+    function animaScroll() {
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const isSectionVisible = sectionTop - halfWindow < 0;
+            if (isSectionVisible) {
+                section.classList.add("active-animation");
+            }
+        });
+    }
+}
+
+animaScroll();
+
+window.addEventListener("scroll", animaScroll);
+
 // Menu mobile
 
 const btnMobile = document.querySelector('.btn-menu');
@@ -24,12 +45,12 @@ Array.prototype.forEach.call(stacks, (element) => {
 
 function activeStackFromSkill(skill) {
     const category = skill.dataset.skillCategory;
-        const categories = category.split(', ');
+    const categories = category.split(', ');
 
-        categories.forEach(cat => {
-            const stack = document.getElementById(cat);
-            stack.classList.toggle('active');
-        });
+    categories.forEach(cat => {
+        const stack = document.getElementById(cat);
+        stack.classList.toggle('active');
+    });
 }
 
 Array.prototype.forEach.call(images, (img) => {
