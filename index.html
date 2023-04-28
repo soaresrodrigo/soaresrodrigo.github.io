@@ -13,11 +13,16 @@
 
     <!-- Navbar -->
     <div class="bg-blackMain section-menu">
-        <navbar class="container">
-            <img class="logo" src="./images/logo.png" alt="" width="142" height="39" />
+        <nav class="container">
+            <div class="logo">
+                <img class="full" src="./images/logo-full.png" alt="" width="142" height="39" />
+                <img class="smart" src="./images/logo-smart.png" alt="" width="40" height="40">
+            </div>
             <img class="rocket-decorator" src="./icons/rocket.svg" alt="" />
-
-            <ul>
+            <button class="btn-menu">
+                <img src="./icons/menu.svg" width="48" height="48" alt="" />
+            </button>
+            <ul id="menuList">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#trajectory">Trajetória</a></li>
                 <li><a href="#services">Serviços</a></li>
@@ -27,11 +32,11 @@
                         Vamos conversar</a>
                 </li>
             </ul>
-        </navbar>
+        </nav>
     </div>
 
     <!-- Header -->
-    <header class="bg-blackMain position-relative section-header">
+    <header class="bg-blackMain section-header">
         <div class="line-decorator"></div>
         <div class="container">
             <div class="text-config">
@@ -70,13 +75,16 @@
 
 
     <!-- About -->
-    <section class="section-about bg-gradient-primary" id="about">
+    <section class="section-about bg-gradient-primary " id="about">
         <div class="tag-icon start">
             <img src="./icons/about_initial_big_tag.svg" alt="">
         </div>
         <div class="line-decorator"></div>
-        <div class="container space-section">
-            <img class="main-image shadow primary" src="./images/avatar.jpg" alt="Rodrigo Soares" />
+        <div class="container">
+            <div class="main-image shadow primary">
+                <img src="./images/avatar.jpg" alt="Rodrigo Soares" width="100%" height="100%" />
+
+            </div>
             <div class="title-config">
                 <h1>Um pouco sobre mim...</h1>
                 <p>Programo desde meus 18 anos, sou apaixonado por resolver problemas complexos com soluções criativas e
@@ -96,20 +104,6 @@
                 </div>
             </div>
         </div>
-        <!-- <ul class="skills">
-            <li><img src="./images/tecs/bootstrap.png" alt="bootstrap" title="bootstrap" /></li>
-            <li><img src="./images/tecs/css.png" alt="css" title="css" /></li>
-            <li><img src="./images/tecs/html.png" alt="html" title="html" /></li>
-            <li><img src="./images/tecs/laravel.png" alt="laravel" title="laravel" /></li>
-            <li><img src="./images/tecs/mongo.png" alt="mongo" title="mongo" /></li>
-            <li><img src="./images/tecs/mysql.png" alt="mysql" title="mysql" /></li>
-            <li><img src="./images/tecs/php.png" alt="php" title="php" /></li>
-            <li><img src="./images/tecs/react.png" alt="react" title="react" /></li>
-            <li><img src="./images/tecs/redux.png" alt="redux" title="redux" /></li>
-            <li><img src="./images/tecs/sass.png" alt="sass" title="sass" /></li>
-            <li><img src="./images/tecs/typescript.png" alt="typescript" title="typescript" /></li>
-            <li><img src="./images/tecs/vue.png" alt="vue" title="vue" /></li>
-        </ul> -->
 
         <div class="tag-icon end">
             <img src="./icons/about_final_big_tag.svg" alt="">
@@ -121,15 +115,14 @@
         <div class="tag-icon start">
             <img src="./icons/trajectory_initial_big_tag.svg" alt="">
         </div>
+        <div class="line-decorator"></div>
 
         <div class="space-section">
-
-            <div class="line-decorator"></div>
-
             <!-- Origamid -->
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>jan 23 - mar 23</span>
                         <h2>Curso na origamid</h2>
                         <h1>UI Design</h1>
                         <ul>
@@ -151,6 +144,7 @@
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>mar 21 - jan 23</span>
                         <h2>planne</h2>
                         <h1>Desenvolvedor FullStack</h1>
                         <p>Criei o site e o blog da empresa usando o next.js, node e mongoDB. Participei ativamente na
@@ -186,6 +180,7 @@
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>jan 20 - jun 22</span>
                         <h2>graduação na estácio</h2>
                         <h1>Análise e Desenvolvimento de Sistemas</h1>
                         <ul>
@@ -206,6 +201,7 @@
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>set 20 - mar 21</span>
                         <h2>insystems</h2>
                         <h1>Desenvolvedor Frontend</h1>
                         <p>Fiquei responsável em desenhar o layout de uma asseguradora veicular. Logo após fiquei
@@ -233,6 +229,7 @@
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>mar 21 - jan 23</span>
                         <h2>Freelancer</h2>
                         <h1>Desenvolvedor Web</h1>
                         <p>Auxiliei empresas que precisavam de manutenção, melhorias em designer e mudanças textuais.
@@ -263,6 +260,7 @@
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>fev 18 - jun 18</span>
                         <h2>curso na upinside</h2>
                         <h1>PHP Orientado a Objetos</h1>
                         <ul>
@@ -282,6 +280,7 @@
             <div class="row">
                 <div class="gradient-border">
                     <div class="card">
+                        <span>jan 14 - jun 15</span>
                         <h2>curso no senai</h2>
                         <h1>Técnico em Informática</h1>
                         <ul>
@@ -308,146 +307,6 @@
         </div>
 
     </section>
-
-    <!-- Services -->
-    <section class="section-services" id="services">
-        <div class="tag-icon start">
-            <img src="./icons/service_initial_big_tag.svg" alt="">
-        </div>
-        <div class="line-decorator"></div>
-        <div class="container space-section">
-            <!-- dba -->
-            <div class="card shadow primary">
-                <img src="./icons/database.svg" alt="database" />
-                <h1>DBA</h1>
-                <div class="skills dba">
-                    <span>criação de banco de dados</span>
-                    <span class="arrow">manutenção</span>
-                    <span class="arrow">normalização</span>
-                </div>
-            </div>
-            <!-- web developer -->
-            <div class="card shadow primary">
-                <img src="./icons/code.svg" alt="code" />
-                <h1>web developer</h1>
-                <div class="skills developer">
-                    <ul>
-                        <li>manutenção</li>
-                        <li>code_review</li>
-                        <li>ecommerce</li>
-                        <li>seo</li>
-                    </ul>
-                    <ul>
-                        <li>hospedagem</li>
-                        <li>tech_spec</li>
-                        <li>features</li>
-                        <li>api</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- designer ux/ui -->
-            <div class="card shadow primary">
-                <img src="./icons/design.svg" alt="design" />
-                <h1>designer ux/ui</h1>
-                <div class="skills designer">
-                    <ul>
-                        <li>web designer</li>
-                        <li>app designer</li>
-                        <li>redesign</li>
-                        <li>wireframes</li>
-                        <li>design responsivo</li>
-                        <li>drafts</li>
-                        <li>lo-fi</li>
-                        <li>hi-fi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="tag-icon end">
-            <img src="./icons/service_final_big_tag.svg" alt="">
-        </div>
-    </section>
-
-
-    <!-- Hire me -->
-    <section class="section-contract">
-        <div class="tag-icon start">
-            <img src="./icons/contract_initial_big_tag.svg" alt="">
-        </div>
-        <div class="line-decorator"></div>
-        <div class="container space-section">
-            <div class="text-config">
-                <h1>Quer saber se eu sou a pessoa certa para seu time ou projeto?</h1>
-                <div class="cta">
-                    <a href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
-                        target="_blank" class="btn primaryMainDark shadow">
-                        Vamos conversar
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="tag-icon end">
-            <img src="./icons/contract_final_big_tag.svg" alt="">
-        </div>
-    </section>
-
-
-    <!-- Contact -->
-    <footer class="section-contact bg-blackMain">
-        <div class="tag-icon start">
-            <img src="./icons/contact_initial_big_tag.svg" alt="">
-        </div>
-        <div class="line-decorator"></div>
-        <div class="container space-section">
-            <div class="main-info">
-                <div class="title-config">
-                    <h1>Me chamo <br />
-                        <span>Rodrigo Soares</span> e...
-                    </h1>
-                    <p>sou graduado em Análise e Desenvolvimento de Sistemas. Sou aquele profissional ideal em
-                        programação ou design web que falta para implementar seu time.</p>
-                </div>
-                <div class="card shadow primary">
-                    <h2>Meus contatos e projetos</h2>
-                    <ul>
-                        <li>
-                            <img src="./icons/whatsapp.svg" alt="">
-                            <a href="https://api.whatsapp.com/send?phone=+5571987465932&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
-                                target="_blank">
-                                (71) 9 8778-4959
-                            </a>
-                        </li>
-                        <li>
-                            <img src="./icons/gmail.svg" alt="">
-                            <a href="mailto:rodrigosoares.dev@gmail.com" target="_blank">rodrigosoares.dev@gmail.com</a>
-                        </li>
-                        <li>
-                            <img src="./icons/github.svg" alt="">
-                            <a href="https://github.com/soaresrodrigo" target="_blank">github.com/soaresrodrigo</a>
-                        </li>
-                        <li>
-                            <img src="./icons/linkedin.svg" alt="">
-                            <a href="https://linkedin.com/in/soaresrodrigo"
-                                target="_blank">linkedin.com/in/soaresrodrigo</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copywrite">
-                <p>2023 © Copywrite</p>
-                <p>Alguns direitos reservados a Rodrigo Soares </p>
-                <p>Direito dos ícones whatsapp, gmail, github e linkedin são reservados a <a
-                        href="https://www.flaticon.com/br/packs/social-media-370" target="_blank">Laisa Islam
-                        Ani</a></p>
-            </div>
-        </div>
-
-        <img class="smoke-decorator" src="./icons/smoke.svg" alt="" />
-        <div class="tag-icon end">
-            <img src="./icons/contact_final_big_tag.svg" alt="">
-        </div>
-    </footer>
 
     <script src="./js/script.js"></script>
 </body>

@@ -7,20 +7,36 @@
     .line-decorator {
         background: linear-gradient(180deg, #5A4CCC 0%, rgba(66, 62, 90, 0) 100%);
     }
+    
     .container {
         display: flex;
         flex-direction: row;
-        // height: calc(100vh - 300px);
         margin: auto;
-
-
+        width: calc(100% - 40px);
+        padding: 40px 20px;
+        
+        
         .main-image {
+            overflow: hidden;
             width: 200px;
             height: 200px;
             border-radius: 5px;
             margin-right: 100px;
+
+            img {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+    
+                &:hover {
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+            }
+
         }
-        
+
         .title-config {
             display: flex;
             gap: 20px 0;
@@ -42,6 +58,7 @@
         }
 
     }
+
     .skills {
         display: flex;
         gap: 5em;
@@ -53,7 +70,7 @@
         left: 0;
         bottom: 0;
         background-color: rgba($color: $whiteLight, $alpha: .02);
-        
+
         li {
             list-style: none;
             display: inline-flex;
@@ -65,11 +82,27 @@
                 filter: grayscale(1);
                 opacity: .7;
                 transition: .3s all;
-                
+
                 &:hover {
                     filter: grayscale(0);
                     opacity: 1;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 1240px) {
+        .container {
+            gap: 40px;
+            flex-direction: column;
+            align-items: center;
+
+            .main-image {
+                margin: auto;
+            }
+
+            .title-config {
+                width: auto;
             }
         }
     }
