@@ -79,3 +79,16 @@ function showSkills(stack, show = true) {
 
     });
 }
+
+// Hidden text about
+function hidenTextSectionAbout() {
+    const mainImage = document.querySelector('.main-image img');
+    const hiddenText = document.querySelector('p.hidden');
+    
+    hiddenText.style.opacity = 0;
+    mainImage.addEventListener('mouseover', () => hiddenText.style.opacity = 1);
+    mainImage.addEventListener('mouseout', () => hiddenText.style.opacity = 0);
+
+}
+
+hidenTextSectionAbout();
