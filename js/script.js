@@ -2,7 +2,7 @@
 const sections = document.querySelectorAll(".js-scroll");
 
 if (sections.length) {
-    const halfWindow = window.innerHeight * 0.95;
+    const halfWindow = window.innerHeight * 0.7;
 
     function animaScroll() {
         sections.forEach((section) => {
@@ -10,6 +10,8 @@ if (sections.length) {
             const isSectionVisible = sectionTop - halfWindow < 0;
             if (isSectionVisible) {
                 section.classList.add("active-animation");
+            } else {
+                section.classList.remove("active-animation")
             }
         });
     }
