@@ -7,15 +7,15 @@
     .line-decorator {
         background: linear-gradient(180deg, #5A4CCC 0%, rgba(66, 62, 90, 0) 100%);
     }
-    
+
     .container {
         display: flex;
         flex-direction: row;
         margin: auto;
         width: calc(100% - 40px);
         padding: 120px 20px;
-        
-        
+
+
         .main-image {
             overflow: hidden;
             width: 200px;
@@ -28,7 +28,7 @@
                 transform: scale(1);
                 -webkit-transition: .3s ease-in-out;
                 transition: .3s ease-in-out;
-    
+
                 &:hover {
                     -webkit-transform: scale(1.1);
                     transform: scale(1.1);
@@ -49,6 +49,29 @@
 
             p {
                 font: $font-paragraph;
+
+                &.hidden {
+                    transition: .2s;
+                    span {
+                        background-color: transparent;
+                        font-weight: bold;
+                        color: inherit;
+                        text-transform: uppercase;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    &::before {
+                        content: "» ";
+                        font: $font-title;
+                        font-size: 2em;
+                    }
+                    &::after {
+                        content: " «";
+                        font: $font-title;
+                        font-size: 2em;
+                    }
+                }
             }
 
             .button-cta {
