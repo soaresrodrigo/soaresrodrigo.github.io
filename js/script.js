@@ -1,4 +1,29 @@
-//  Animação do scroll
+// Animation soft scroll
+
+function softScroll() {
+    const internalLinks = document.querySelectorAll('.js-menu a[href^="#"]');
+
+    function scrollToSection(e) {
+        e.preventDefault();
+        const href = e.currentTarget.getAttribute('href');
+
+        const section = document.querySelector(href);
+
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    }
+
+    internalLinks.forEach(link => {
+        link.addEventListener('click', scrollToSection);
+    });
+}
+
+softScroll();
+
+
+// Animation scroll show sections
 const sections = document.querySelectorAll(".js-scroll");
 
 if (sections.length) {

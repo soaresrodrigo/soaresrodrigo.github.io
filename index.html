@@ -12,7 +12,7 @@
 <body>
 
     <!-- Navbar -->
-    <div class="bg-blackMain section-menu">
+    <div id="home" class="bg-blackMain section-menu">
         <nav class="container">
             <div class="logo">
                 <img class="full" src="./images/logo-full.webp" alt="" width="142" height="39" />
@@ -22,14 +22,14 @@
             <button class="btn-menu">
                 <img src="./icons/menu.svg" width="48" height="48" alt="" />
             </button>
-            <ul id="menuList">
+            <ul id="menuList" class="js-menu">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#trajectory">Trajetória</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li>
                     <a href="https://api.whatsapp.com/send?phone=+5571987784959&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
                         target="_blank" class="btn primary shadow">
-                        conversar</a>
+                        vamos conversar</a>
                 </li>
             </ul>
         </nav>
@@ -187,7 +187,8 @@
             </div>
             <div class="title-config js-scroll left">
                 <h1>Um pouco sobre mim...</h1>
-                <p>Programo desde meus 18 anos de idade, sou apaixonado por resolver problemas complexos com soluções criativas e
+                <p>Programo desde meus 18 anos de idade, sou apaixonado por resolver problemas complexos com soluções
+                    criativas e
                     eficientes. Minha curiosidade e vontade de aprender me levam a explorar diferentes tecnologias e
                     linguagens de programação, em busca da melhor abordagem para cada projeto.</p>
 
@@ -197,7 +198,11 @@
                     facilitando assim, o crescimento pessoal e <strong>empresarial</strong>.</p>
 
                 <button class="see-more">Ver mais...</button>
-                <p class="hidden">Fiz esse portfólio do zero, desde um rascunho de papel até a elaboração de um protótipo completo no figma. Comecei com o sonho de fazer um site que demonstrasse um pouco das minhas habilidades e criatividade. Embora eu saiba utilizar o next, vue, react, wordpress, bootstrap e outras ferramentas que auxiliam no desenvolvimento, acredito que para esse portfólio, apenas <span>HTML</span>, <span>SCSS</span> e <span>JS</span> são o suficiente para me representar.</p>
+                <p class="hidden">Fiz esse portfólio do zero, desde um rascunho de papel até a elaboração de um
+                    protótipo completo no figma. Comecei com o sonho de fazer um site que demonstrasse um pouco das
+                    minhas habilidades e criatividade. Embora eu saiba utilizar o next, vue, react, wordpress, bootstrap
+                    e outras ferramentas que auxiliam no desenvolvimento, acredito que para esse portfólio, apenas
+                    <span>HTML</span>, <span>SCSS</span> e <span>JS</span> são o suficiente para me representar.</p>
 
                 <div class="button-cta">
                     <a href="https://api.whatsapp.com/send?phone=+5571987784959&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
@@ -250,14 +255,19 @@
                         <span>mar 21 - jan 23</span>
                         <h2>planne</h2>
                         <h1>Desenvolvedor FullStack</h1>
-                        <p>Criei o site e o blog da empresa usando o <b>next.js</b>, <b>node</b> e <b>mongodb</b>. Participei ativamente na
-                            manutenção do painel administrativo e widgets usando <b>PHP com Laravel</b>, <b>React</b>, <b>Redux</b>, <b>Vue.js</b> e <b>Sass</b>. Contribuí com o Code Review (Analisando os códigos dos colegas e sugerindo possíveis melhorias). Desenvolvi um template SSG
+                        <p>Criei o site e o blog da empresa usando o <b>next.js</b>, <b>node</b> e <b>mongodb</b>.
+                            Participei ativamente na
+                            manutenção do painel administrativo e widgets usando <b>PHP com Laravel</b>, <b>React</b>,
+                            <b>Redux</b>, <b>Vue.js</b> e <b>Sass</b>. Contribuí com o Code Review (Analisando os
+                            códigos dos colegas e sugerindo possíveis melhorias). Desenvolvi um template SSG
                             em
-                            <b>Next.js</b> com <b>Typescript</b> que se comunicava com o widget de login e pagamento. Protagonizei
+                            <b>Next.js</b> com <b>Typescript</b> que se comunicava com o widget de login e pagamento.
+                            Protagonizei
                             algumas
                             tech specs, cujo objetivo era pesquisar e documentar possíveis tecnologias para implementar
                             no
-                            sistema de forma escalável.</p>
+                            sistema de forma escalável.
+                        </p>
                         <ul>
                             <li>react</li>
                             <li>typescript</li>
@@ -309,7 +319,8 @@
                         <h2>insystems</h2>
                         <h1>Desenvolvedor Frontend</h1>
                         <p>Tive a missão de desenhar o layout de uma seguradora veicular. Logo após fiquei
-                            responsável em desenvolver o sistema usando <b>Vue.js</b> e consumindo os dados da API que o laravel
+                            responsável em desenvolver o sistema usando <b>Vue.js</b> e consumindo os dados da API que o
+                            laravel
                             encaminhava. Participei de reuniões com os <b>Stackholders</b>, no qual eu registrava as
                             demandas e apresentava o módulo do produto daquela sprint.</p>
                         <ul>
@@ -539,10 +550,12 @@
                 <p>Direito dos ícones whatsapp, gmail, github e linkedin são reservados a <a
                         href="https://www.flaticon.com/br/packs/social-media-370" target="_blank">Laisa Islam</a></p>
             </div>
-            <a href="#" class="scroll-to-top">
-                Voltar ao topo
-                <img src="./icons/scroll-to-top.svg" alt="">
-            </a>
+            <div class="js-menu scroll-to-top">
+                <a href="#home">
+                    Voltar ao topo
+                    <img src="./icons/scroll-to-top.svg" alt="">
+                </a>
+            </div>
         </div>
 
         <img class="smoke-decorator" src="./icons/smoke.svg" alt="" />

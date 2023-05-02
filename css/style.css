@@ -839,13 +839,15 @@
 .section-contact .scroll-to-top {
   font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
   font-size: medium;
-  color: #ADADAD;
   cursor: pointer;
   opacity: 0.2;
   transition: 0.3s;
   border: none;
   display: inline-flex;
   align-self: center;
+}
+.section-contact .scroll-to-top a {
+  color: #ADADAD;
 }
 .section-contact .scroll-to-top:hover {
   opacity: 1;
