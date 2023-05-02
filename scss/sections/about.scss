@@ -47,6 +47,24 @@
                 font: $font-title;
             }
 
+            .see-more {
+                display: block;
+                width: fit-content;
+                font: $font-paragraph;
+                font-weight: bold;
+                color: $silverLight;
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                text-decoration: underline;
+                transition: .3s;
+
+                &:hover {
+                    color: $whiteLight;
+                }
+            }
+
             p {
                 font: $font-paragraph;
 
@@ -61,16 +79,16 @@
                         margin: 0;
                     }
 
-                    &::before {
-                        content: "» ";
-                        font: $font-title;
-                        font-size: 2em;
-                    }
-                    &::after {
-                        content: " «";
-                        font: $font-title;
-                        font-size: 2em;
-                    }
+                    // &::before {
+                    //     content: "» ";
+                    //     font: $font-title;
+                    //     font-size: 2em;
+                    // }
+                    // &::after {
+                    //     content: " «";
+                    //     font: $font-title;
+                    //     font-size: 2em;
+                    // }
                 }
             }
 

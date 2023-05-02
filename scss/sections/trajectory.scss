@@ -90,6 +90,7 @@
             h1 {
                 font: $font-title;
                 background-image: $primaryGradient;
+                background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
             }
@@ -97,6 +98,15 @@
             p {
                 font: $font-paragraph;
                 color: $blackDark;
+
+                a {
+                    color: $primary;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: lighten($primary, 10%);
+                    }
+                }
             }
 
             ul {

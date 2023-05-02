@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
@@ -302,6 +301,22 @@
 .section-about .container .title-config h1 {
   font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
 }
+.section-about .container .title-config .see-more {
+  display: block;
+  width: fit-content;
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #DBDBDB;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+.section-about .container .title-config .see-more:hover {
+  color: #fff;
+}
 .section-about .container .title-config p {
   font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
 }
@@ -315,16 +330,6 @@
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-}
-.section-about .container .title-config p.hidden::before {
-  content: "» ";
-  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
-  font-size: 2em;
-}
-.section-about .container .title-config p.hidden::after {
-  content: " «";
-  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
-  font-size: 2em;
 }
 .section-about .container .title-config .button-cta {
   display: inline-flex;
@@ -450,12 +455,20 @@
 .section-trajectory .row .card h1 {
   font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
   background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 .section-trajectory .row .card p {
   font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
   color: #000000;
+}
+.section-trajectory .row .card p a {
+  color: #6C5CE7;
+  font-weight: 600;
+}
+.section-trajectory .row .card p a:hover {
+  color: #9488ee;
 }
 .section-trajectory .row .card ul {
   display: flex;
@@ -822,6 +835,20 @@
 }
 .section-contact .copywrite a:hover {
   color: #e3e3e3;
+}
+.section-contact .scroll-to-top {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  font-size: medium;
+  color: #ADADAD;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: 0.3s;
+  border: none;
+  display: inline-flex;
+  align-self: center;
+}
+.section-contact .scroll-to-top:hover {
+  opacity: 1;
 }
 .section-contact .smoke-decorator {
   display: flex;
