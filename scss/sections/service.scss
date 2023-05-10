@@ -18,6 +18,22 @@
         gap: 20px;
     }
 
+    .title-config {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1 {
+            font: $font-title;
+            color: $blackMain;
+        }
+        
+        p {
+            font: $font-paragraph;
+            color: $grayLight;
+        }
+    }
+
     .card {
         display: flex;
         align-items: center;

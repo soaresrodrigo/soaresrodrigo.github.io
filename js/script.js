@@ -1,3 +1,19 @@
+// Scroll menu transparency
+
+function scrollNavMenu() {
+    window.addEventListener('scroll', function () {
+        const menu = document.querySelector('.section-menu nav');
+        if (window.scrollY > 50) {
+            menu.classList.add('active');
+        } else {
+            menu.classList.remove('active');
+        }
+    });
+
+}
+
+scrollNavMenu();
+
 // Animation soft scroll
 
 function softScroll() {
@@ -148,3 +164,25 @@ function limitWords() {
 }
 
 limitWords();
+
+
+// Limit trajectory
+function limitTrajectory() {
+    const rows = document.querySelectorAll('.section-trajectory .space-section .row');
+    const seeAll = document.querySelector('.section-trajectory button');
+
+    Array.prototype.forEach.call(rows, (element, index) => {
+        if (index >= 3) {
+            element.style.display = 'none';
+        }
+    })
+
+    seeAll.addEventListener('click', () => {
+        seeAll.style.display = 'none'
+        Array.prototype.reduce.call(rows, (_, current) => {
+            current.style.display = 'grid';
+        }, null);
+    })
+}
+
+limitTrajectory();

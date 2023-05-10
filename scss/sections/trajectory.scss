@@ -8,6 +8,22 @@
     position: relative;
     z-index: 1;
 
+    .title-config {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1 {
+            font: $font-title;
+            color: $primary;
+        }
+        
+        p {
+            font: $font-paragraph;
+            color: $grayLight;
+        }
+    }
+
     .space-section {
         max-width: calc(100% - 40px);
         padding: 80px 20px;
@@ -147,6 +163,13 @@
         }
     }
 
+    button {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
     @media (max-width: 1000px) {
         .space-section {
             display: flex;
@@ -191,8 +214,8 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    width: 1px;
-                    height: 13px;
+                    // width: 1px;
+                    // height: 13px;
                     background: $primaryGradient;
                     /* substitua pela cor desejada */
                     top: 5px;
