@@ -12,62 +12,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.section-menu .container {
+  max-width: 1230px;
+}
+
 .section-menu > nav {
   display: flex;
-  position: relative;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 40px);
-  padding: 0 20px;
+  right: 0;
+  left: 0;
   height: 100px;
   margin: auto;
   z-index: 3;
+  transition: 0.3s;
 }
 .section-menu > nav .logo {
-  padding: 0;
+  padding: 0 20px;
 }
 .section-menu > nav .logo .smart {
   display: none;
 }
-.section-menu > nav .rocket-decorator {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
 .section-menu > nav .btn-menu {
+  padding: 0 20px;
   display: none;
 }
 .section-menu > nav ul {
+  padding: 0 20px;
   display: flex;
   align-items: center;
   gap: 20px;
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 .section-menu > nav ul li {
   padding: 0;
   margin: 0;
 }
-.section-menu > nav ul li a:not(.btn-normal) {
+.section-menu > nav ul li a:not(.btn) {
   text-decoration: none;
   font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
   text-transform: uppercase;
   color: #f1f1f1;
 }
-.section-menu > nav ul li a:not(.btn-normal):hover {
+.section-menu > nav ul li a:not(.btn):hover {
   transition: 0.3s all;
   color: #6C5CE7;
 }
+.section-menu > nav.active {
+  background: rgba(22, 22, 22, 0.8);
+  border-radius: 0 0 5px 5px;
+  backdrop-filter: blur(10px);
+  height: 60px;
+}
+@media (max-width: 1000px) {
+  .section-menu > nav.active {
+    border-radius: 0;
+  }
+}
 @media (max-width: 1000px) {
   .section-menu > nav {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
     height: 60px;
+    background: rgba(0, 0, 0, 0.7);
   }
   .section-menu > nav .logo .full {
     display: none;
@@ -118,11 +125,13 @@
   height: calc(100vh - 220px);
   width: calc(100% - 40px);
   padding: 0 20px;
-  padding-top: 120px;
+  padding-top: 220px;
   z-index: 1;
   overflow: hidden;
 }
 .section-header .line-decorator {
+  top: 100px;
+  height: calc(100% - 100px);
   background-color: #212121;
 }
 .section-header .text-config {
@@ -384,6 +393,20 @@
   position: relative;
   z-index: 1;
 }
+.section-trajectory .title-config {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-trajectory .title-config h1 {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  color: #6C5CE7;
+}
+.section-trajectory .title-config p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #8C8C8C;
+}
 .section-trajectory .space-section {
   max-width: calc(100% - 40px);
   padding: 80px 20px;
@@ -502,6 +525,12 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+.section-trajectory button {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
 @media (max-width: 1000px) {
   .section-trajectory .space-section {
     display: flex;
@@ -540,8 +569,6 @@
   .section-trajectory .row .dot-decorator::before {
     content: "";
     position: absolute;
-    width: 1px;
-    height: 13px;
     background: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
     /* substitua pela cor desejada */
     top: 5px;
@@ -576,6 +603,20 @@
   justify-content: center;
   width: calc(100% - 40px);
   gap: 20px;
+}
+.section-services .title-config {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-services .title-config h1 {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  color: #161616;
+}
+.section-services .title-config p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #8C8C8C;
 }
 .section-services .card {
   display: flex;
@@ -839,13 +880,15 @@
 .section-contact .scroll-to-top {
   font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
   font-size: medium;
-  color: #ADADAD;
   cursor: pointer;
   opacity: 0.2;
   transition: 0.3s;
   border: none;
   display: inline-flex;
   align-self: center;
+}
+.section-contact .scroll-to-top a {
+  color: #ADADAD;
 }
 .section-contact .scroll-to-top:hover {
   opacity: 1;
@@ -910,6 +953,20 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #9488ee;
+}
+
+.rocket-decorator {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+@media (max-width: 1000px) {
+  .rocket-decorator {
+    top: 30px;
+  }
 }
 
 .js .js-scroll {

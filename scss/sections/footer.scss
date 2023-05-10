@@ -125,13 +125,16 @@
     .scroll-to-top {
         font: $font-title;
         font-size: medium;
-        color: $silverDark;
         cursor: pointer;
         opacity: .2;
         transition: .3s;
         border: none;
         display: inline-flex;
         align-self: center;
+
+        a {
+            color: $silverDark;
+        }
 
         &:hover {
             opacity: 1;

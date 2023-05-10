@@ -38,6 +38,19 @@
     }
 }
 
+.rocket-decorator {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+
+    @media (max-width: 1000px) {
+        top: 30px;
+    }
+}
+
 // ANIMATIONS
 .js {
     .js-scroll {

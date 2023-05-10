@@ -1,4 +1,45 @@
-//  Animação do scroll
+// Scroll menu transparency
+
+function scrollNavMenu() {
+    window.addEventListener('scroll', function () {
+        const menu = document.querySelector('.section-menu nav');
+        if (window.scrollY > 50) {
+            menu.classList.add('active');
+        } else {
+            menu.classList.remove('active');
+        }
+    });
+
+}
+
+scrollNavMenu();
+
+// Animation soft scroll
+
+function softScroll() {
+    const internalLinks = document.querySelectorAll('.js-menu a[href^="#"]');
+
+    function scrollToSection(e) {
+        e.preventDefault();
+        const href = e.currentTarget.getAttribute('href');
+
+        const section = document.querySelector(href);
+
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    }
+
+    internalLinks.forEach(link => {
+        link.addEventListener('click', scrollToSection);
+    });
+}
+
+softScroll();
+
+
+// Animation scroll show sections
 const sections = document.querySelectorAll(".js-scroll");
 
 if (sections.length) {
@@ -123,3 +164,25 @@ function limitWords() {
 }
 
 limitWords();
+
+
+// Limit trajectory
+function limitTrajectory() {
+    const rows = document.querySelectorAll('.section-trajectory .space-section .row');
+    const seeAll = document.querySelector('.section-trajectory button');
+
+    Array.prototype.forEach.call(rows, (element, index) => {
+        if (index >= 3) {
+            element.style.display = 'none';
+        }
+    })
+
+    seeAll.addEventListener('click', () => {
+        seeAll.style.display = 'none'
+        Array.prototype.reduce.call(rows, (_, current) => {
+            current.style.display = 'grid';
+        }, null);
+    })
+}
+
+limitTrajectory();
