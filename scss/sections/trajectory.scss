@@ -215,7 +215,8 @@
             }
 
             .card {
-                box-shadow: -2px 2px 3px rgba($color: $blackDark, $alpha: .1);
+                // box-shadow: -2px 2px 3px rgba($color: $blackDark, $alpha: .1);
+                box-shadow: 5px 5px 0px $whiteDark;
 
                 span {
                     display: block;
@@ -224,6 +225,7 @@
             }
 
             .dot-decorator {
+                display: none;
                 margin-top: -5px;
                 position: absolute;
 
