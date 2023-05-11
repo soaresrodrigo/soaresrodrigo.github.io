@@ -422,6 +422,17 @@
   gap: 0 40px;
   align-items: center;
 }
+.section-trajectory .row.inactive {
+  display: none;
+}
+.section-trajectory .row.active {
+  display: grid;
+}
+@media (max-width: 1000px) {
+  .section-trajectory .row.active {
+    display: flex;
+  }
+}
 .section-trajectory .row:nth-child(even) {
   grid-template-areas: "period dot card";
 }
@@ -528,6 +539,7 @@
 .section-trajectory button {
   display: block;
   margin: auto;
+  border: none;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -757,7 +769,7 @@
 .section-contract .text-config h1 {
   max-width: 640px;
   font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
-  color: #B7ADFF;
+  color: #fff;
 }
 @media (max-width: 1000px) {
   .section-contract .text-config > h1 {

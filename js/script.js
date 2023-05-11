@@ -173,14 +173,14 @@ function limitTrajectory() {
 
     Array.prototype.forEach.call(rows, (element, index) => {
         if (index >= 3) {
-            element.style.display = 'none';
+            element.classList.add('inactive');
         }
     })
-
+    
     seeAll.addEventListener('click', () => {
         seeAll.style.display = 'none'
         Array.prototype.reduce.call(rows, (_, current) => {
-            current.style.display = 'grid';
+            current.classList.add('active');
         }, null);
     })
 }
