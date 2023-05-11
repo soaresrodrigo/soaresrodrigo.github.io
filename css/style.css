@@ -161,7 +161,7 @@
   box-shadow: inset 0px -10px 0px #6C5CE7;
   transition: all 0.3s;
 }
-.section-header .text-config .stacks li.active, .section-header .text-config .stacks li:hover {
+.section-header .text-config .stacks li.active, .section-header .text-config .stacks li:hover, .section-header .text-config .stacks li:active {
   cursor: default;
   box-shadow: inset 0px -24px 0px #6C5CE7;
 }
@@ -177,8 +177,9 @@
   display: flex;
   align-items: center;
   position: relative;
+  margin-left: 80%;
   gap: 5em;
-  animation: scroll 90s linear infinite;
+  animation: scroll 60s linear infinite;
   animation-play-state: running;
   position: absolute;
   width: max-content;
@@ -186,14 +187,13 @@
   left: 0;
   bottom: 0;
   border-top: 5px solid transparent;
+  padding: 0 10px;
 }
-.section-header .skills.active, .section-header .skills:hover {
+.section-header .skills.active, .section-header .skills:hover, .section-header .skills:active {
   transition: 0.3s;
-  border-color: #6C5CE7;
-  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
 }
-.section-header .skills.active li img, .section-header .skills:hover li img {
+.section-header .skills.active li img, .section-header .skills:hover li img, .section-header .skills:active li img {
   opacity: 0.5;
 }
 .section-header .skills li {
@@ -254,11 +254,18 @@
   }
 }
 @media (max-width: 785px) {
+  .section-header {
+    overflow-x: auto;
+  }
   .section-header .principal-image {
     display: none;
   }
   .section-header .skills {
-    width: 4000px;
+    padding: 0;
+    margin: 0;
+    animation: none;
+    width: 100%;
+    overflow: auto;
   }
 }
 @keyframes scroll {
@@ -377,12 +384,16 @@
     gap: 40px;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
   .section-about .container .main-image {
     margin: auto;
   }
   .section-about .container .title-config {
     width: auto;
+  }
+  .section-about .container .button-cta {
+    margin: auto;
   }
 }
 
@@ -421,6 +432,17 @@
   grid-template-areas: "card dot period";
   gap: 0 40px;
   align-items: center;
+}
+.section-trajectory .row.inactive {
+  display: none;
+}
+.section-trajectory .row.active {
+  display: grid;
+}
+@media (max-width: 1000px) {
+  .section-trajectory .row.active {
+    display: flex;
+  }
 }
 .section-trajectory .row:nth-child(even) {
   grid-template-areas: "period dot card";
@@ -528,6 +550,7 @@
 .section-trajectory button {
   display: block;
   margin: auto;
+  border: none;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -557,12 +580,13 @@
     width: 100%;
   }
   .section-trajectory .row .card {
-    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 0px #eaeaea;
   }
   .section-trajectory .row .card span {
     display: block;
   }
   .section-trajectory .row .dot-decorator {
+    display: none;
     margin-top: -5px;
     position: absolute;
   }
@@ -757,7 +781,7 @@
 .section-contract .text-config h1 {
   max-width: 640px;
   font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
-  color: #B7ADFF;
+  color: #fff;
 }
 @media (max-width: 1000px) {
   .section-contract .text-config > h1 {

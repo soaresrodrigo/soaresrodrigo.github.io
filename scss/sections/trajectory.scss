@@ -13,11 +13,12 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
         h1 {
             font: $font-title;
             color: $primary;
         }
-        
+
         p {
             font: $font-paragraph;
             color: $grayLight;
@@ -33,6 +34,7 @@
         background-color: $whiteDark;
     }
 
+
     .row {
         position: relative;
         display: grid;
@@ -41,8 +43,19 @@
         gap: 0 40px;
         align-items: center;
 
+        &.inactive {
+            display: none;
+        }
+
+        &.active {
+            display: grid;
+
+            @media (max-width: 1000px) {
+                display: flex;
+            }
+        }
+
         &:nth-child(even) {
-            // flex-direction: row-reverse;
             grid-template-areas: "period dot card";
 
             .gradient-border {
@@ -140,6 +153,8 @@
                     border-radius: 5px;
                 }
             }
+
+
         }
 
         .dot-decorator {
@@ -166,6 +181,7 @@
     button {
         display: block;
         margin: auto;
+        border: none;
         cursor: pointer;
         border-radius: 5px;
     }
@@ -199,7 +215,8 @@
             }
 
             .card {
-                box-shadow: -2px 2px 3px rgba($color: $blackDark, $alpha: .1);
+                // box-shadow: -2px 2px 3px rgba($color: $blackDark, $alpha: .1);
+                box-shadow: 5px 5px 0px $whiteDark;
 
                 span {
                     display: block;
@@ -208,6 +225,7 @@
             }
 
             .dot-decorator {
+                display: none;
                 margin-top: -5px;
                 position: absolute;
 

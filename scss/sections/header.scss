@@ -46,7 +46,8 @@
                 box-shadow: inset 0px -10px 0px $primary;
                 transition: all .3s;
 
-                &.active, &:hover {
+                &.active,
+                &:hover, &:active {
                     cursor: default;
                     box-shadow: inset 0px -24px 0px $primary;
 
@@ -68,8 +69,9 @@
         display: flex;
         align-items: center;
         position: relative;
+        margin-left: 80%;
         gap: 5em;
-        animation: scroll 90s linear infinite;
+        animation: scroll 60s linear infinite;
         animation-play-state: running;
         position: absolute;
         width: max-content;
@@ -77,11 +79,13 @@
         left: 0;
         bottom: 0;
         border-top: 5px solid transparent;
+        padding: 0 10px;
 
-        &.active, &:hover {
+        &.active,
+        &:hover, &:active {
             transition: .3s;
-            border-color: $primary;
-            background: rgba($color: $whiteLight, $alpha: .5);
+            // border-color: $primary;
+            // background: rgba($color: $whiteLight, $alpha: .5);
             backdrop-filter: blur(10px);
 
             li {
@@ -165,8 +169,14 @@
             display: none;
         }
 
+        overflow-x: auto;
+
         .skills {
-            width: 4000px;
+            padding: 0;
+            margin: 0;
+            animation: none;
+            width: 100%;
+            overflow: auto;
             // gap: 5em;
         }
     }
