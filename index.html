@@ -16,8 +16,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
+    <meta name="title" content="Portfólio de Rodrigo Soares" />
+    <meta name="description" content="Graduado em Análise e Desenvolvimento de Sistemas. Sou aquele profissional ideal em programação ou
+    design web que falta para implementar seu time." />
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" type="image/png" href="./images/logo-smart.webp">
+    <link rel="shortcut icon" type="image/webp" href="./images/logo-smart.webp">
     <title>Rodrigo Soares - Portfólio</title>
 
 </head>
@@ -32,19 +35,19 @@
     <div id="home" class="section-menu">
         <nav class="container js-menu">
             <a href="#home" class="logo">
-                <img class="full" src="./images/logo-full.png" alt="" width="142" height="39" />
+                <img class="full" src="./images/logo-full.webp" alt="" width="142" height="39" />
                 <img class="smart" src="./images/logo-smart.webp" alt="" width="40" height="40">
             </a>
-            <button class="btn-menu">
+            <button class="btn-menu" aria-label="menu">
                 <img src="./icons/menu.svg" width="48" height="48" alt="" />
             </button>
             <ul id="menuList">
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#trajectory">Trajetória</a></li>
-                <li><a href="#services">Serviços</a></li>
+                <li><a href="#about" aria-label="Sobre">Sobre</a></li>
+                <li><a href="#trajectory" aria-label="Trajetória">Trajetória</a></li>
+                <li><a href="#services" aria-label="Serviços">Serviços</a></li>
                 <li>
                     <a href="https://api.whatsapp.com/send?phone=+5571987784959&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
-                        target="_blank" class="btn primary shadow">
+                        aria-label="Vamos conversar" target="_blank" class="btn primary shadow">
                         vamos conversar</a>
                 </li>
             </ul>
@@ -75,7 +78,7 @@
                     <li id="designer">#ux/ui designer</li>
                 </ul>
             </div>
-            <img class="principal-image js-scroll left" src="./images/astronaut.png" alt="" />
+            <img class="principal-image js-scroll left" src="./images/astronaut.webp" alt="" />
         </div>
         <ul class="skills">
             <li><img src="./images/tecs/html.webp" data-skill-category="fullstack, frontend" width="50" height="50"
@@ -159,7 +162,7 @@
                     trabalho flui suave, sem contar as experiências e ideias que nascem de forma mais orgânica,
                     facilitando assim, o crescimento pessoal e <strong>empresarial</strong>.</p>
 
-                <button class="see-more">Ver mais...</button>
+                <button class="see-more" aria-label="Ver mais sobre mim">Ver mais...</button>
                 <p class="hidden">Fiz esse portfólio do zero, desde um rascunho de papel até a elaboração de um
                     protótipo completo no figma. Comecei com o sonho de fazer um site que demonstrasse um pouco das
                     minhas habilidades e criatividade. Embora eu saiba utilizar o next, vue, react, wordpress, bootstrap
@@ -169,7 +172,7 @@
 
                 <div class="button-cta">
                     <a href="https://api.whatsapp.com/send?phone=+5571987784959&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
-                        target="_blank" class="btn primary shadow">
+                        aria-label="Vamos conversar" target="_blank" class="btn primary shadow">
                         Vamos conversar
                     </a>
                 </div>
@@ -384,9 +387,8 @@
 
         </div>
 
-        <button class="see-more">
+        <button class="see-more" aria-label="Ver toda trajetória">
             Quero ver toda trajetória...
-            <!-- <img src="./icons/arrow_down.svg" alt=""> -->
         </button>
 
 
@@ -471,7 +473,7 @@
             <div class="text-config">
                 <h1 class="js-scroll">Quer saber se eu sou a pessoa certa para seu time ou projeto?</h1>
                 <a href="https://api.whatsapp.com/send?phone=+5571987784959&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
-                    target="_blank" class="btn big primaryMainDark shadow js-scroll left">
+                    aria-label="Vamos conversar" target="_blank" class="btn big primaryMainDark shadow js-scroll left">
                     Vamos conversar
                 </a>
             </div>
@@ -503,22 +505,24 @@
                         <li>
                             <img src="./icons/whatsapp.svg" alt="">
                             <a href="https://api.whatsapp.com/send?phone=+5571987784959&text=Olá, Rodrigo! Vi seu portfólio e gostaria de conversar contigo!"
-                                target="_blank">
+                                aria-label="Vamos conversar via whatsapp" target="_blank">
                                 (71) 9 8778-4959
                             </a>
                         </li>
                         <li>
                             <img src="./icons/gmail.svg" alt="">
-                            <a href="mailto:rodrigosoares.dev@gmail.com" target="_blank">rodrigosoares.dev@gmail.com</a>
+                            <a href="mailto:rodrigosoares.dev@gmail.com" target="_blank"
+                                aria-label="Vamos conversar via email">rodrigosoares.dev@gmail.com</a>
                         </li>
                         <li>
                             <img src="./icons/github.svg" alt="">
-                            <a href="https://github.com/soaresrodrigo" target="_blank">github.com/soaresrodrigo</a>
+                            <a href="https://github.com/soaresrodrigo" target="_blank" aria-label="
+                            Veja meu github">github.com/soaresrodrigo</a>
                         </li>
                         <li>
                             <img src="./icons/linkedin.svg" alt="">
-                            <a href="https://linkedin.com/in/soaresrodrigo"
-                                target="_blank">linkedin.com/in/soaresrodrigo</a>
+                            <a href="https://linkedin.com/in/soaresrodrigo" target="_blank"
+                                aria-label="Veja meu linkedin">linkedin.com/in/soaresrodrigo</a>
                         </li>
                     </ul>
                 </div>
@@ -528,12 +532,6 @@
                 <p>Alguns direitos reservados a <b>Rodrigo Soares</b></p>
                 <p>Direito dos ícones whatsapp, gmail, github e linkedin são reservados a <a
                         href="https://www.flaticon.com/br/packs/social-media-370" target="_blank">Laisa Islam</a></p>
-            </div>
-            <div class="js-menu scroll-to-top">
-                <a href="#home">
-                    Voltar ao topo
-                    <img src="./icons/scroll-to-top.svg" alt="">
-                </a>
             </div>
         </div>
 
