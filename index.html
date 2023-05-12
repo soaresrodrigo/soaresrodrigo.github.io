@@ -15,7 +15,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./images/logo-smart.webp">
     <title>Rodrigo Soares - Portfólio</title>
 
 </head>
@@ -28,15 +30,15 @@
     <!-- Navbar -->
     <img class="rocket-decorator" src="./icons/rocket.svg" alt="" />
     <div id="home" class="section-menu">
-        <nav class="container">
+        <nav class="container js-menu">
             <a href="#home" class="logo">
-                <img class="full" src="./images/logo-full.webp" alt="" width="142" height="39" />
+                <img class="full" src="./images/logo-full.png" alt="" width="142" height="39" />
                 <img class="smart" src="./images/logo-smart.webp" alt="" width="40" height="40">
             </a>
             <button class="btn-menu">
                 <img src="./icons/menu.svg" width="48" height="48" alt="" />
             </button>
-            <ul id="menuList" class="js-menu">
+            <ul id="menuList">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#trajectory">Trajetória</a></li>
                 <li><a href="#services">Serviços</a></li>
@@ -73,7 +75,7 @@
                     <li id="designer">#ux/ui designer</li>
                 </ul>
             </div>
-            <img class="principal-image js-scroll left" src="./images/astronaut.svg" alt="" />
+            <img class="principal-image js-scroll left" src="./images/astronaut.png" alt="" />
         </div>
         <ul class="skills">
             <li><img src="./images/tecs/html.webp" data-skill-category="fullstack, frontend" width="50" height="50"
@@ -137,7 +139,7 @@
     <!-- About -->
     <section class="section-about bg-gradient-primary js" id="about">
         <div class="tag-icon start js-scroll bottom">
-            <img src="./icons/about_initial.svg" alt="">
+            <img src="./icons/initial_tag.svg" alt="">
         </div>
         <div class="line-decorator"></div>
         <div class="container">
@@ -174,15 +176,15 @@
             </div>
         </div>
 
-        <div class="tag-icon end js-scroll">
-            <img src="./icons/about_final.svg" alt="">
+        <div class="tag-icon end darken js-scroll">
+            <img src="./icons/final_tag.svg" alt="">
         </div>
     </section>
 
     <!-- Trajectory -->
     <section class="section-trajectory js" id="trajectory">
         <div class="tag-icon start js-scroll">
-            <img src="./icons/trajectory_initial.svg" alt="">
+            <img src="./icons/initial_tag.svg" alt="">
         </div>
         <div class="line-decorator"></div>
         <div class="title-config js-scroll">
@@ -382,12 +384,15 @@
 
         </div>
 
-        <button class="btn primary shadow js-scroll">Quero ver toda trajetória</button>
+        <button class="see-more">
+            Quero ver toda trajetória...
+            <!-- <img src="./icons/arrow_down.svg" alt=""> -->
+        </button>
 
 
 
         <div class="tag-icon end js-scroll">
-            <img src="./icons/trajectory_final.svg" alt="">
+            <img src="./icons/final_tag.svg" alt="">
         </div>
 
     </section>
@@ -395,7 +400,7 @@
     <!-- Services -->
     <section class="section-services js" id="services">
         <div class="tag-icon start js-scroll">
-            <img src="./icons/service_initial.svg" alt="">
+            <img src="./icons/initial_tag.svg" alt="">
         </div>
         <div class="line-decorator"></div>
         <div class="title-config js-scroll">
@@ -452,14 +457,14 @@
         </div>
 
         <div class="tag-icon end js-scroll">
-            <img src="./icons/service_final.svg" alt="">
+            <img src="./icons/final_tag.svg" alt="">
         </div>
     </section>
 
     <!-- Hire me -->
     <section class="section-contract js">
         <div class="tag-icon start js-scroll">
-            <img src="./icons/contract_initial.svg" alt="">
+            <img src="./icons/initial_tag.svg" alt="">
         </div>
         <div class="line-decorator"></div>
         <div class="container space-section">
@@ -472,15 +477,15 @@
             </div>
         </div>
         <div class="tag-icon end js-scroll">
-            <img src="./icons/contract_final.svg" alt="">
+            <img src="./icons/final_tag.svg" alt="">
         </div>
     </section>
 
 
     <!-- Contact -->
     <footer class="section-contact bg-blackMain js">
-        <div class="tag-icon start js-scroll">
-            <img src="./icons/contact_initial.svg" alt="">
+        <div class="tag-icon start darken js-scroll">
+            <img src="./icons/initial_tag.svg" alt="">
         </div>
         <div class="line-decorator"></div>
         <div class="container space-section">
@@ -533,8 +538,8 @@
         </div>
 
         <img class="smoke-decorator" src="./icons/smoke.svg" alt="" />
-        <div class="tag-icon end">
-            <img src="./icons/contact_final.svg" alt="">
+        <div class="tag-icon darken end">
+            <img src="./icons/final_tag.svg" alt="">
         </div>
     </footer>
 
