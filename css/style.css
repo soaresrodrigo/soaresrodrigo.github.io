@@ -13,7 +13,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 .section-menu .container {
-  max-width: 1230px;
+  max-width: 1190px;
 }
 
 .section-menu > nav {
@@ -66,12 +66,12 @@
   backdrop-filter: blur(10px);
   height: 60px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .section-menu > nav.active {
     border-radius: 0;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .section-menu > nav {
     height: 60px;
     background: rgba(0, 0, 0, 0.7);
@@ -1000,7 +1000,7 @@
   transform: translate(-50%, -50%);
   z-index: 4;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .rocket-decorator {
     top: 30px;
   }
@@ -1091,7 +1091,7 @@
 
 .container {
   width: 100%;
-  max-width: 1130px;
+  max-width: 1150px;
   margin: 0 auto;
   z-index: 1;
 }

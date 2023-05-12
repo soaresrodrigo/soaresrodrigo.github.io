@@ -46,7 +46,7 @@
     transform: translate(-50%, -50%);
     z-index: 4;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1150px) {
         top: 30px;
     }
 }
@@ -161,7 +161,7 @@
 
 .container {
     width: 100%;
-    max-width: 1130px;
+    max-width: 1150px;
     margin: 0 auto;
     z-index: 1;
 }
