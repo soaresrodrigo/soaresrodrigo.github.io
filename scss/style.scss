@@ -60,15 +60,15 @@
 
         &.left {
             transform: translate3d(20px, 0, 0);
-            
+
         }
-        
+
         &.start {
-            transform: translate3d(0, -20px,0);
+            transform: translate3d(0, -20px, 0);
         }
 
         &.end {
-            transform: translate3d(0, 20px,0);
+            transform: translate3d(0, 20px, 0);
         }
 
         &.active-animation {
@@ -189,6 +189,12 @@
     position: relative;
     z-index: -1;
     padding: 15px;
+    opacity: .04 !important;
+
+    &.darken {
+        opacity: .2 !important;
+    }
+
 
     &.start {
         justify-content: flex-start;
