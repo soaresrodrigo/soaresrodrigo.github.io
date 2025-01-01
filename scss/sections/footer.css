@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.section-contact {
+  position: relative;
+  z-index: 1;
+}
+.section-contact .line-decorator {
+  background-color: #212121;
+  height: calc(100% - 58px);
+}
+.section-contact .container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px 0;
+  width: calc(100% - 40px);
+  padding: 30px 20px;
+}
+.section-contact .main-info {
+  display: flex;
+  flex-direction: row;
+}
+.section-contact .title-config {
+  max-width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-contact .title-config h1 {
+  font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
+  color: #DBDBDB;
+}
+.section-contact .title-config h1 span {
+  color: #6C5CE7;
+}
+.section-contact .title-config p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #C9C9C9;
+}
+.section-contact .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 40px;
+  width: 350px;
+  gap: 20px;
+  border-radius: 5px;
+}
+.section-contact .card h2 {
+  font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.section-contact .card ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.section-contact .card ul li {
+  display: flex;
+  gap: 0 20px;
+  flex-direction: row;
+}
+.section-contact .card ul li img {
+  width: 24px;
+  height: 24px;
+}
+.section-contact .card ul li a {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  text-decoration-color: #6C5CE7;
+  color: #eaeaea;
+  display: flex;
+  gap: 0 20px;
+  transition: all 0.3s;
+  display: block;
+  border-bottom: 1px dashed #6C5CE7;
+  text-transform: lowercase;
+}
+.section-contact .card ul li a:hover {
+  color: #000000;
+  box-shadow: inset 0px -24px 0px #6C5CE7;
+}
+.section-contact .copywrite {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #212121;
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: auto;
+  gap: 0;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.section-contact .copywrite a {
+  color: #C9C9C9;
+  text-decoration: none;
+  font-weight: bold;
+}
+.section-contact .copywrite a:hover {
+  color: #e3e3e3;
+}
+.section-contact .scroll-to-top {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  font-size: medium;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: 0.3s;
+  border: none;
+  display: inline-flex;
+  align-self: center;
+}
+.section-contact .scroll-to-top a {
+  color: #ADADAD;
+}
+.section-contact .scroll-to-top:hover {
+  opacity: 1;
+}
+.section-contact .smoke-decorator {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+@media (max-width: 1000px) {
+  .section-contact .main-info {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .section-contact .main-info .title-config {
+    max-width: 100%;
+  }
+  .section-contact .main-info .title-config h1 {
+    font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  }
+  .section-contact .tag-icon.end {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .section-contact .card {
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 100%;
+    padding: 10px;
+    word-break: break-all;
+  }
+}/*# sourceMappingURL=footer.css.map */

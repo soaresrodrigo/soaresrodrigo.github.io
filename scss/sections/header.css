@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.section-header {
+  position: relative;
+  height: calc(100vh - 220px);
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  padding-top: 220px;
+  z-index: 1;
+  overflow: hidden;
+}
+.section-header .line-decorator {
+  top: 100px;
+  height: calc(100% - 100px);
+  background-color: #212121;
+}
+.section-header .text-config {
+  display: flex;
+  flex-direction: column;
+  gap: 60px 0;
+}
+.section-header .text-config h1 {
+  font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
+  color: #DBDBDB;
+}
+.section-header .text-config h1 span {
+  color: #6C5CE7;
+}
+.section-header .text-config p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #C9C9C9;
+  width: 495px;
+}
+.section-header .text-config .stacks {
+  font: normal normal 400 normal 20px/24px "Open Sans", sans-serif;
+  display: inline-flex;
+  gap: 20px;
+}
+.section-header .text-config .stacks li {
+  display: flex;
+  box-shadow: inset 0px -10px 0px #6C5CE7;
+  transition: all 0.3s;
+}
+.section-header .text-config .stacks li.active, .section-header .text-config .stacks li:hover, .section-header .text-config .stacks li:active {
+  cursor: default;
+  box-shadow: inset 0px -24px 0px #6C5CE7;
+}
+.section-header .principal-image {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: -3;
+  width: 720px;
+  height: 700px;
+}
+.section-header .skills {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 80%;
+  gap: 5em;
+  animation: scroll 60s linear infinite;
+  animation-play-state: running;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  border-top: 5px solid transparent;
+  padding: 0 10px;
+}
+.section-header .skills.active, .section-header .skills:hover, .section-header .skills:active {
+  transition: 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.section-header .skills.active li img, .section-header .skills:hover li img, .section-header .skills:active li img {
+  opacity: 0.5;
+}
+.section-header .skills li {
+  list-style: none;
+  display: inline-flex;
+}
+.section-header .skills li img {
+  filter: grayscale(1);
+  opacity: 0.2;
+  transition: 0.3s all;
+}
+.section-header .skills li img:hover, .section-header .skills li img.active {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.section-header .skills:hover {
+  animation-play-state: paused;
+}
+@media (max-width: 1500px) {
+  .section-header .principal-image {
+    opacity: 0.1;
+  }
+}
+@media (max-width: 1240px) {
+  .section-header {
+    height: auto;
+  }
+  .section-header .skills {
+    margin-top: 30px;
+    align-items: center;
+    justify-items: flex-start;
+    position: relative;
+  }
+}
+@media (max-width: 1000px) {
+  .section-header {
+    padding: 0 20px;
+  }
+  .section-header .principal-image {
+    width: 500px;
+    height: 424px;
+  }
+  .section-header .text-config {
+    padding-top: 120px;
+    gap: 20px 0;
+  }
+  .section-header .text-config h1 {
+    font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  }
+  .section-header .text-config p {
+    width: auto;
+    max-width: 640px;
+  }
+  .section-header .text-config .stacks {
+    padding-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 785px) {
+  .section-header {
+    overflow-x: auto;
+  }
+  .section-header .principal-image {
+    display: none;
+  }
+  .section-header .skills {
+    padding: 0;
+    margin: 0;
+    animation: none;
+    width: 100%;
+    overflow: auto;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=header.css.map */

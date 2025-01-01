@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.section-trajectory {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 1;
+}
+.section-trajectory .title-config {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-trajectory .title-config h1 {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  color: #161616;
+}
+.section-trajectory .title-config p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #787878;
+}
+.section-trajectory .space-section {
+  max-width: calc(100% - 40px);
+  padding: 80px 20px;
+}
+.section-trajectory .line-decorator {
+  background-color: #eaeaea;
+}
+.section-trajectory .row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0 1fr;
+  grid-template-areas: "card dot period";
+  gap: 0 40px;
+  align-items: center;
+}
+.section-trajectory .row.inactive {
+  display: none;
+}
+.section-trajectory .row.active {
+  display: grid;
+}
+@media (max-width: 1000px) {
+  .section-trajectory .row.active {
+    display: flex;
+  }
+}
+.section-trajectory .row:nth-child(even) {
+  grid-template-areas: "period dot card";
+}
+.section-trajectory .row:nth-child(even) .gradient-border {
+  justify-self: flex-start;
+}
+.section-trajectory .row:nth-child(even) .gradient-border::before {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+.section-trajectory .row:nth-child(even) .period {
+  justify-self: flex-end;
+}
+.section-trajectory .row .gradient-border {
+  grid-area: card;
+  justify-self: flex-end;
+  align-self: center;
+  position: relative;
+}
+.section-trajectory .row .gradient-border::before {
+  border-radius: 0 5px 5px 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 7px;
+  background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  z-index: 1;
+}
+.section-trajectory .row .card {
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 520px;
+}
+.section-trajectory .row .card span {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font: normal normal 400 normal 10px/12px "Open Sans", sans-serif;
+  color: #ADADAD;
+}
+.section-trajectory .row .card h2 {
+  font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
+  text-transform: uppercase;
+  color: #8C8C8C;
+}
+.section-trajectory .row .card h1 {
+  font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.section-trajectory .row .card p {
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  color: #000000;
+}
+.section-trajectory .row .card p a {
+  color: #6C5CE7;
+  font-weight: 600;
+}
+.section-trajectory .row .card p a:hover {
+  color: #9488ee;
+}
+.section-trajectory .row .card ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.section-trajectory .row .card ul li {
+  box-shadow: inset 0px 0px 2px rgba(108, 92, 231, 0.5);
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #6C5CE7;
+  padding: 5px;
+  border-radius: 5px;
+}
+.section-trajectory .row .dot-decorator {
+  grid-area: dot;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+}
+.section-trajectory .row .period {
+  grid-area: period;
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  background-image: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.section-trajectory .see-more {
+  display: flex;
+  font: normal normal 400 normal 16px/22px "Open Sans", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: medium;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  margin: auto;
+  align-items: center;
+  justify-self: center;
+  align-content: center;
+  background-color: transparent;
+  transition: 0.3s;
+  color: #6C5CE7;
+}
+.section-trajectory .see-more:hover {
+  opacity: 0.7;
+}
+@media (max-width: 1000px) {
+  .section-trajectory .space-section {
+    display: flex;
+    width: 100%;
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .section-trajectory .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .section-trajectory .row .gradient-border {
+    max-width: 100%;
+    margin: auto;
+  }
+  .section-trajectory .row .gradient-border::before {
+    height: 0;
+    width: 100%;
+  }
+  .section-trajectory .row .card {
+    box-shadow: 5px 5px 0px #eaeaea;
+  }
+  .section-trajectory .row .card span {
+    display: block;
+  }
+  .section-trajectory .row .dot-decorator {
+    display: none;
+    margin-top: -5px;
+    position: absolute;
+  }
+  .section-trajectory .row .dot-decorator::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #6C5CE7 0%, #161616 100%, #000000 100%);
+    /* substitua pela cor desejada */
+    top: 5px;
+    left: -5px;
+    transform: rotate(60deg);
+  }
+  .section-trajectory .row .period {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .section-trajectory .space-section {
+    padding: 80px 5px;
+    max-width: calc(100% - 10px);
+  }
+  .section-trajectory .gradient-border {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=trajectory.css.map */

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.section-menu .container {
+  max-width: 1190px;
+}
+
+.section-menu > nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  right: 0;
+  left: 0;
+  height: 100px;
+  margin: auto;
+  z-index: 3;
+  transition: 0.3s;
+}
+.section-menu > nav .logo {
+  padding: 0 20px;
+}
+.section-menu > nav .logo .smart {
+  display: none;
+}
+.section-menu > nav .btn-menu {
+  padding: 0 20px;
+  display: none;
+}
+.section-menu > nav ul {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+.section-menu > nav ul li {
+  padding: 0;
+  margin: 0;
+}
+.section-menu > nav ul li a:not(.btn) {
+  text-decoration: none;
+  font: normal normal 600 normal 14px/16px "Orbitron", sans-serif;
+  text-transform: uppercase;
+  color: #f1f1f1;
+}
+.section-menu > nav ul li a:not(.btn):hover {
+  transition: 0.3s all;
+  color: #6C5CE7;
+}
+.section-menu > nav.active {
+  background: rgba(22, 22, 22, 0.8);
+  border-radius: 0 0 5px 5px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 60px;
+}
+@media (max-width: 1150px) {
+  .section-menu > nav.active {
+    border-radius: 0;
+  }
+}
+@media (max-width: 1150px) {
+  .section-menu > nav {
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .section-menu > nav .logo .full {
+    display: none;
+  }
+  .section-menu > nav .logo .smart {
+    display: block;
+  }
+  .section-menu > nav .btn-menu {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .section-menu > nav .btn-menu img {
+    opacity: 0.8;
+  }
+  .section-menu > nav .btn-menu img:hover {
+    opacity: 1;
+  }
+  .section-menu > nav ul {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    top: 60px;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+    transition: 0.2s;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+  }
+  .section-menu > nav ul.active {
+    height: 150px;
+    padding: 20px 0;
+    visibility: visible;
+  }
+}/*# sourceMappingURL=navbar.css.map */

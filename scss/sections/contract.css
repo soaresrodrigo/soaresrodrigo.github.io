@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+.section-contract {
+  position: relative;
+  background-color: #6C5CE7;
+  z-index: 1;
+}
+.section-contract .container {
+  width: calc(100% - 40px);
+  padding: 30px 20px;
+}
+.section-contract .line-decorator {
+  background-color: #7160F4;
+}
+.section-contract .text-config {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.section-contract .text-config h1 {
+  max-width: 640px;
+  font: normal normal 700 normal 48px/60px "Orbitron", sans-serif;
+  color: #fff;
+}
+@media (max-width: 1000px) {
+  .section-contract .text-config > h1 {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1240px) {
+  .section-contract .text-config {
+    gap: 40px;
+  }
+  .section-contract .text-config h1 {
+    font: normal normal 700 normal 24px/32px "Orbitron", sans-serif;
+  }
+}/*# sourceMappingURL=contract.css.map */
