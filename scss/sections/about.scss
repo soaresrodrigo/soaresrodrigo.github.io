@@ -18,23 +18,25 @@
 
         .main-image {
             overflow: hidden;
-            width: 200px;
-            height: 200px;
-            border-radius: 5px;
-            margin-right: 100px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-right: 80px;
+            box-shadow: 0 4px 24px rgba(90, 76, 204, 0.12);
 
             img {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                -webkit-transition: .3s ease-in-out;
-                transition: .3s ease-in-out;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            transition: transform .3s ease-in-out;
+            will-change: transform;
 
-                &:hover {
-                    -webkit-transform: scale(1.1);
-                    transform: scale(1.1);
-                }
+            &:hover {
+                transform: scale(1.08);
             }
-
+            }
         }
 
         .title-config {
